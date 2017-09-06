@@ -1,0 +1,248 @@
+$grey: #383A3F;
+$red: #f9320c;
+
+@mixin bg_img($url, $size, $position){
+	background-image: url($url);
+	background-size: $size;
+	background-position: $position;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: "proxima-nova";
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: "lust";
+	font-weight: 400;
+}
+
+.cf:before, .cf:after{
+	content: "";
+	display: table;
+}
+
+.cf:after{
+	clear: both;
+}
+
+.wrapper{
+	width: 1000px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.banner{
+	padding: 5em 0;
+	.logo{
+		float: left;
+	}
+	h1{
+		color: $grey;
+		text-align: right;
+		font-size: 5em;
+		display: inline;;
+		float: right;
+		margin: 0;
+	}
+}
+
+.logo{
+	background: $red;
+	width: 75px;
+	height: 75px;
+	border-radius: 100%;
+	line-height: 75px;
+	text-align: center;
+	font-size: 2em;
+	font-family: "proxima-nova";
+	color: white;
+	text-transform: uppercase;
+}
+
+.row{
+	width: 100%;
+	margin-bottom: 2em;
+	&:before, &:after{
+		content: "";
+		display: table;
+	}
+	&:after{
+		clear: both;
+	}
+}
+
+.work{
+	background: $grey;
+	padding: 5em 0;
+	.card{
+		background: white;
+		border-radius: .35em;
+		height: 450px;
+		display: table;
+		background-repeat: no-repeat;
+	}
+
+	.card_full{
+		width: 100%;
+	}
+
+	.card_half{
+		width: 48.5%;
+		float: left;
+	}
+
+	.card_third{
+		width: 75%;
+		float: left;
+	}
+
+	.left{
+		margin-right: 1.5%;
+	}
+
+	.right{
+		margin-left: 1.5%;
+	}
+
+	.tall{
+		height: 700px;
+	}
+
+	.card_1{
+		@include bg_img('/images/collaborate-min.jpg', 100%, 0px 0px);
+	}
+
+	.card_2{
+		@include bg_img('/images/spoj.png', 130%, 115px 40px);
+	}
+
+	.card_3{
+		@include bg_img('/images/hackerrank.png', 80%, 170px 240px);
+	}
+
+	.card_4{
+		@include bg_img('/images/bayer.jpg', 100%, 0px 0px);
+	}
+
+	.card_inner{
+		display: table-cell;
+		background: green;
+		vertical-align: middle;
+		height: 100%;
+		padding: 1.5em 12%;
+		color: white;
+		p{
+			color: $grey;
+			font-size: 1em;
+			text-transform: uppercase;
+			font-weight: 700;
+		}
+		h2{
+			font-size: 3em;
+			margin: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+		.profile_link{
+			color: $grey;
+			font-size: 1em;
+			text-transform: uppercase;
+			font-weight: 600;
+			border: 2px solid $grey;
+			margin-top: 20px;
+			width: 150px;
+			text-align: center;
+			padding: 8px 0;
+			transition: 0.1s ease-in;
+			&:hover{
+				background-color: $grey;
+				color: white;
+				box-shadow: 0 0 8px $grey;
+			}
+		}
+	}
+
+	.red, .green, .blue{
+		border-radius: 0.35em;
+	}
+
+	.red{
+		background: rgba(249, 192, 12, .60);
+	}
+
+	.green{
+		background: rgba(0, 185, 241, .60);
+	}
+
+	.blue{
+		background: rgba(117, 215, 1, .60);
+	}
+
+	.purple{
+		background: rgba(249, 50, 12, .60);
+	}
+
+	.view_more{
+		width: 25%;
+		float: left;
+		height: 450px;
+		padding-left: 3em;
+		p{
+			font-size: 1.25em;
+			font-weight: 700;
+			line-height: 450px;
+			margin: 0;
+			color: lightgrey;
+		}
+		a{
+			text-decoration: none;
+			&:hover{
+				p{
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+footer{
+	padding: 3em 0;
+	.logo{
+		float: left;
+		margin: 0;
+	}
+	ul{
+		list-style: none;
+		margin: 0;
+		padding-top: 1em;
+		li{
+			display: inline;
+			float: left;
+			margin-left: 4em;
+			.title{
+				text-transform: uppercase;
+				font-weight: 700;
+				font-size: .75em;
+				display: block;
+				padding-bottom: .5em;
+			}
+			.links{
+				font-family: "lust";
+				font-size: 1.75em;
+				a{
+					color: $grey;
+					text-decoration: none;
+					&:hover{
+						color: red;
+					}
+				}
+			}
+		}
+	}
+}

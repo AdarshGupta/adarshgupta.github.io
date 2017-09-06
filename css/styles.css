@@ -1,0 +1,184 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: "proxima-nova";
+  -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "lust";
+  font-weight: 400; }
+
+.cf:before, .cf:after {
+  content: "";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.wrapper {
+  width: 1000px;
+  max-width: 100%;
+  margin: 0 auto; }
+
+.banner {
+  padding: 5em 0; }
+  .banner .logo {
+    float: left; }
+  .banner h1 {
+    color: #383A3F;
+    text-align: right;
+    font-size: 5em;
+    display: inline;
+    float: right;
+    margin: 0; }
+
+.logo {
+  background: #f9320c;
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  line-height: 75px;
+  text-align: center;
+  font-size: 2em;
+  font-family: "proxima-nova";
+  color: white;
+  text-transform: uppercase; }
+
+.row {
+  width: 100%;
+  margin-bottom: 2em; }
+  .row:before, .row:after {
+    content: "";
+    display: table; }
+  .row:after {
+    clear: both; }
+
+.work {
+  background: #383A3F;
+  padding: 5em 0; }
+  .work .card {
+    background: white;
+    border-radius: .35em;
+    height: 450px;
+    display: table;
+    background-repeat: no-repeat; }
+  .work .card_full {
+    width: 100%; }
+  .work .card_half {
+    width: 48.5%;
+    float: left; }
+  .work .card_third {
+    width: 75%;
+    float: left; }
+  .work .left {
+    margin-right: 1.5%; }
+  .work .right {
+    margin-left: 1.5%; }
+  .work .tall {
+    height: 700px; }
+  .work .card_1 {
+    background-image: url("/images/collaborate-min.jpg");
+    background-size: 100%;
+    background-position: 0px 0px; }
+  .work .card_2 {
+    background-image: url("/images/spoj.png");
+    background-size: 130%;
+    background-position: 115px 40px; }
+  .work .card_3 {
+    background-image: url("/images/hackerrank.png");
+    background-size: 80%;
+    background-position: 170px 240px; }
+  .work .card_4 {
+    background-image: url("/images/bayer.jpg");
+    background-size: 100%;
+    background-position: 0px 0px; }
+  .work .card_inner {
+    display: table-cell;
+    background: green;
+    vertical-align: middle;
+    height: 100%;
+    padding: 1.5em 12%;
+    color: white; }
+    .work .card_inner p {
+      color: #383A3F;
+      font-size: 1em;
+      text-transform: uppercase;
+      font-weight: 700; }
+    .work .card_inner h2 {
+      font-size: 3em;
+      margin: 0; }
+    .work .card_inner a {
+      text-decoration: none; }
+    .work .card_inner .profile_link {
+      color: #383A3F;
+      font-size: 1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      border: 2px solid #383A3F;
+      margin-top: 20px;
+      width: 150px;
+      text-align: center;
+      padding: 8px 0;
+      -webkit-transition: 0.1s ease-in;
+      -o-transition: 0.1s ease-in;
+      transition: 0.1s ease-in; }
+      .work .card_inner .profile_link:hover {
+        background-color: #383A3F;
+        color: white;
+        -webkit-box-shadow: 0 0 8px #383A3F;
+        box-shadow: 0 0 8px #383A3F; }
+  .work .red, .work .green, .work .blue {
+    border-radius: 0.35em; }
+  .work .red {
+    background: rgba(249, 192, 12, 0.6); }
+  .work .green {
+    background: rgba(0, 185, 241, 0.6); }
+  .work .blue {
+    background: rgba(117, 215, 1, 0.6); }
+  .work .purple {
+    background: rgba(249, 50, 12, 0.6); }
+  .work .view_more {
+    width: 25%;
+    float: left;
+    height: 450px;
+    padding-left: 3em; }
+    .work .view_more p {
+      font-size: 1.25em;
+      font-weight: 700;
+      line-height: 450px;
+      margin: 0;
+      color: lightgrey; }
+    .work .view_more a {
+      text-decoration: none; }
+      .work .view_more a:hover p {
+        color: white; }
+
+footer {
+  padding: 3em 0; }
+  footer .logo {
+    float: left;
+    margin: 0; }
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding-top: 1em; }
+    footer ul li {
+      display: inline;
+      float: left;
+      margin-left: 4em; }
+      footer ul li .title {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: .75em;
+        display: block;
+        padding-bottom: .5em; }
+      footer ul li .links {
+        font-family: "lust";
+        font-size: 1.75em; }
+        footer ul li .links a {
+          color: #383A3F;
+          text-decoration: none; }
+          footer ul li .links a:hover {
+            color: red; }
