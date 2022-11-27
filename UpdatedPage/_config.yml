@@ -1,4 +1,3 @@
-name: Your New Jekyll Site
+name: Adarsh Gupta
 markdown: kramdown
-highlighter: rouge # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
