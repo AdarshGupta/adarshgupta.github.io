@@ -411,7 +411,7 @@ body {
   background: #F6F6F8;
   font-size: 14px;
   line-height: 1.6;
-  font-family: "Open Sans" sans-serif;
+  font-family: "Fira Sans", sans-serif;
   color: #2E2D33;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -576,6 +576,30 @@ body {
             transform: translateY(0%);
   }
 }
+section.about {
+  background: url(../img/about-bg.jpg);
+  background-position: center bottom;
+  background-size: cover;
+}
+section.about h2 {
+  color: #3f3f42;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1;
+  margin-left: -108px;
+  margin-top: 0;
+}
+section.about .home-lead {
+  padding-bottom: 180px;
+}
+
+@media (max-width: 640px) {
+  section.about h2, section.about .home-lead {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+  }
+}
 .home-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -623,7 +647,6 @@ body {
 .col-1 {
   max-width: 300px;
   margin: 0 10px;
-  background: pink;
 }
 
 .col-2 {
@@ -637,6 +660,10 @@ body {
   background: yellow;
 }
 
+.push-right {
+  margin-left: 330px;
+}
+
 @media (max-width: 640px) {
   .home-sections .flex {
     display: block;
@@ -647,4 +674,11 @@ body {
   .col-50 {
     width: auto;
   }
+  .push-right {
+    margin-left: 10px;
+  }
+}
+.home-lead {
+  font-size: 36px;
+  line-height: 1.1;
 }

@@ -5,6 +5,7 @@
 @import "1-base/_vars.sass";
 @import "1-base/_base.sass";
 
-@import "2-modules/header";
+@import "3-sections/header";
+@import "3-sections/home-about";
 
-@import "3-layouts/home";
+@import "4-layouts/home";
