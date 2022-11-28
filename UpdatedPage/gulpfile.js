@@ -74,7 +74,7 @@ function jadeToHTML(){
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 function watch() {
-    gulp.watch('assets/css/**', gulp.series(styles, jekyllBuild, jekyllRebuild));
+    gulp.watch(['assets/css/**/*.scss', 'assets/css/**/*.sass'], gulp.series(styles, jekyllBuild, jekyllRebuild));
     gulp.watch('_jadefiles/*.jade', gulp.series(jadeToHTML)); // Updated "_includes" which triggers a reload auto.
     gulp.watch(['index.html', '_layouts/*.html', '_includes/*'], gulp.series(jekyllBuild, jekyllRebuild));
 }
