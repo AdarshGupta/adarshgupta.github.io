@@ -702,6 +702,74 @@ section.youtube .col-1 {
   }
 }
 
+section.mentoring {
+  background-image: url(../img/mentoring-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white;
+  overflow: hidden;
+}
+section.mentoring .home-cta {
+  color: #2cb4db;
+}
+section.mentoring .home-lead {
+  margin-top: 250px;
+}
+section.mentoring .faces {
+  list-style: none;
+  margin: -50px 0;
+  height: calc(100% + 100px);
+  padding: 0;
+  position: relative;
+  top: 800px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+section.mentoring .faces.launched {
+  top: 0px;
+}
+section.mentoring .face {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 35px;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  position: relative;
+  cursor: pointer;
+}
+section.mentoring .bubble {
+  opacity: 0;
+  position: absolute;
+  left: 100%;
+  bottom: 50%;
+  margin-left: 10px;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 40px 40px 40px 5px;
+  border: 3px solid white;
+  pointer-events: none;
+  -webkit-transition: all 0.2s cubic-bezier(0, 0.53, 0.34, 1.5);
+  -o-transition: all 0.2s cubic-bezier(0, 0.53, 0.34, 1.5);
+  transition: all 0.2s cubic-bezier(0, 0.53, 0.34, 1.5);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+section.mentoring .face.has-bubble-open .bubble {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
 .home-wrap {
   display: -webkit-box;
   display: -ms-flexbox;

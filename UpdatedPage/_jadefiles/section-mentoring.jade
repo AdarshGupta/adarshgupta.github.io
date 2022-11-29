@@ -1,0 +1,20 @@
+mixin face(face, words, name)
+    li.face(style="background-image: url(#{face});")
+        .bubble
+            p #{words}
+            cite - #{name}
+
+section.mentoring
+    .flex.flex--center
+        .col-1
+            ul.faces
+                +face("https://placem.at/people?w=80&h=80", "He is pretty good", "ABC")
+                +face("https://placem.at/people?w=80&h=80", "He is mind-blowing good", "DEF")
+                +face("https://placem.at/people?w=80&h=80", "He is fantabulous", "XYZ")
+                +face("https://placem.at/people?w=80&h=80", "He is fantastic good", "GHI")
+                +face("https://placem.at/people?w=80&h=80", "He is amazing", "JKL")
+                +face("https://placem.at/people?w=80&h=80", "He is crazy good", "MNOP")
+
+        .col-1
+            p.home-lead.outdented ...Mentoring people like you...
+            a(href="").home-cta Schedule a call

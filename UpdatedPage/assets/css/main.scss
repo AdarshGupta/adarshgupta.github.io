@@ -4,12 +4,13 @@
 
 @import "1-base/_vars.sass";
 @import "1-base/_base.sass";
+@import "1-base/_buttons";
 
-@import "2-modules/buttons";
-@import "2-modules/flex-video";
+@import "2-modules/_flex-video";
 
-@import "3-sections/header";
-@import "3-sections/home-about";
-@import "3-sections/home-youtube";
+@import "3-sections/_header";
+@import "3-sections/_home-about";
+@import "3-sections/_home-youtube";
+@import "3-sections/_home-mentoring";
 
-@import "4-layouts/home";
+@import "4-layouts/_home";

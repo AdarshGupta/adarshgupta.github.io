@@ -76,7 +76,7 @@ function jadeToHTML(){
 function watch() {
     gulp.watch(['assets/css/**/*.scss', 'assets/css/**/*.sass'], gulp.series(styles, jekyllBuild, jekyllRebuild));
     gulp.watch('_jadefiles/*.jade', gulp.series(jadeToHTML)); // Updated "_includes" which triggers a reload auto.
-    gulp.watch(['index.html', '_layouts/*.html', '_includes/*'], gulp.series(jekyllBuild, jekyllRebuild));
+    gulp.watch(['index.html', '_layouts/*.html', '_includes/*', 'assets/js/**'], gulp.series(jekyllBuild, jekyllRebuild));
 }
 
 exports.jekyllBuild = jekyllBuild;
