@@ -9,11 +9,25 @@ function mentoringBubbleClick(){
         var faceTop = $this.position().top;
         var vertMath = -(faceTop - 230);
 
-        $this.parent().css('top', vertMath + 'px');
+        var faceLeft = $this.position().left;
+        var horizMath = 0 - faceLeft;
 
+        if($(window).width() > 640){
+            $this.parent().css('top', vertMath + 'px');
+        }
+        else{
+            if($this.hasClass('back-btn')){
+                mentoringNarrowStart();
+            }
+            else{
+                $this.parent().css('left', horizMath + 'px');
+            }
+        }
 
-        $(this).addClass('has-bubble-open')
-            .siblings().removeClass('has-bubble-open');
+        if(!$this.hasClass('back-btn')){
+            $(this).addClass('has-bubble-open')
+                    .siblings().removeClass('has-bubble-open');
+        }
     });
 }
 
@@ -33,9 +47,45 @@ function startMentoring(){
     var wScroll = $(window).scrollTop();
 
     if($('section.mentoring').offset().top - 500 < wScroll){
-        $('.faces').addClass('launched');
-        setTimeout(function(){
-            $('.face:nth-child(3)').addClass('has-bubble-open');
-        }, 400);
+
+        if($(window).width() > 640){
+            $('.faces').addClass('launched');
+
+            if(!$('.face').hasClass('has-bubble-open')){
+                setTimeout(function(){
+                    $('.face:nth-child(3)').addClass('has-bubble-open');
+                }, 400);
+            }
+        }
+        else{
+            mentoringNarrowStart();
+        }
     }
 }
+
+function mentoringNarrowStart(){
+    $('.faces').css({
+        'top': '230px',
+        'left': '0px'
+    });
+    $('.face').first().addClass('has-bubble-open')
+        .siblings().removeClass('has-bubble-open');
+}
+
+function mentoringWideStart(){
+    $('.faces').css({
+        'top': '0px',
+        'left': '0px'
+    });
+    $('.face:nth-child(3)').addClass('has-bubble-open')
+        .siblings().removeClass('has-bubble-open');
+}
+
+$(window).resize(function(){
+    if($(window).width() > 640){
+        mentoringWideStart();
+    }
+    else{
+        mentoringNarrowStart();
+    }
+});

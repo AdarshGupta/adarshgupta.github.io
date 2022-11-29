@@ -741,6 +741,11 @@ section.mentoring .face {
   position: relative;
   cursor: pointer;
 }
+section.mentoring .face.back-btn {
+  background: white url(../img/back-icon.svg) center no-repeat;
+  background-size: 15px 26px;
+  display: none;
+}
 section.mentoring .bubble {
   opacity: 0;
   position: absolute;
@@ -770,6 +775,31 @@ section.mentoring .face.has-bubble-open .bubble {
           transform: scale(1);
 }
 
+@media (max-width: 640px) {
+  section.mentoring .faces {
+    margin: 0;
+    width: 805px;
+    top: 230px;
+    left: 0px;
+  }
+  section.mentoring .face {
+    display: inline-block;
+    margin-right: 35px;
+  }
+  section.mentoring .face.back-btn {
+    display: inline-block;
+  }
+  section.mentoring .bubble {
+    bottom: 100px;
+    left: 0px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-left: 0px;
+  }
+  section.mentoring .col-1 {
+    width: auto;
+  }
+}
 .home-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -857,7 +887,11 @@ section.mentoring .face.has-bubble-open .bubble {
 .home-lead.outdented {
   text-indent: -0.69em;
 }
+
 @media (max-width: 640px) {
+  .home-lead {
+    text-align: center;
+  }
   .home-lead.outdented {
     text-indent: 0;
   }
