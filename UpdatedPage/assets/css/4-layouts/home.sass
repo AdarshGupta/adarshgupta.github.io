@@ -27,8 +27,9 @@
 
 // columns
 .col-1
-    max-width: 300px
-    margin: 0 10px
+    width: 320px
+    padding: 0 10px
+    box-sizing: border-box
 
 .col-2
     max-width: 620px
@@ -55,8 +56,15 @@
     .push-right
         margin-left: 10px
 
+
 // Typography
 
 .home-lead
     font-size: 36px
     line-height: 1.1
+
+    &.outdented
+        text-indent: -0.69em
+
+        @media (max-width: 640px)
+            text-indent: 0
