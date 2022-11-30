@@ -24,6 +24,17 @@ section.articles
         float: left
         position: relative
         overflow: hidden
+        opacity: 0
+        transition: all 0.3s ease-in-out
+
+        &.is-visible
+            opacity: 1
+
+        &.is-emph
+            animation-name: tada
+            animation-duration: 1s
+            animation-fill-mode: both
+            z-index: 1
 
         &:after
             content: ''
@@ -64,3 +75,26 @@ section.articles
     @media (max-width: 999px) and (min-width: 640px)
         .article-thumb
             width: 33.3%
+
+// From animate.css - https://github.com/animate-css/animate.css/blob/main/source/attention_seekers/tada.css
+@keyframes tada 
+  from 
+    transform: scale3d(1, 1, 1)
+  
+  10%,
+  20% 
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg)
+  
+  30%,
+  50%,
+  70%,
+  90% 
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+  
+  40%,
+  60%,
+  80% 
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+  
+  to 
+    transform: scale3d(1, 1, 1)
