@@ -853,6 +853,7 @@ section.articles .article-meta {
 }
 section.articles .article-meta .name {
   font-size: 18px;
+  line-height: 1.2;
 }
 section.articles .article-meta .date {
   font-style: italic;
@@ -869,6 +870,11 @@ section.articles .article-thumb:hover .article-meta {
   }
   section.articles .col-1 {
     width: auto;
+  }
+}
+@media (max-width: 999px) and (min-width: 640px) {
+  section.articles .article-thumb {
+    width: 33.3%;
   }
 }
 
@@ -931,7 +937,6 @@ section.articles .article-thumb:hover .article-meta {
 
 .col-50 {
   width: 50%;
-  background: yellow;
 }
 
 .push-right {
