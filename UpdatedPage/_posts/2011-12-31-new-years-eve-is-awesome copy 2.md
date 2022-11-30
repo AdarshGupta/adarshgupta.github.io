@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "New years eve is awesome"
-thumbnail: https://picsum.photos/230/500
+thumbnail: assets/img/posts/thumbnails/post-1.png
 ---
 
 # Hello world
