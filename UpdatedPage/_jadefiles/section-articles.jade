@@ -1,0 +1,29 @@
+mixin thumb
+    a(href="" style="background-image: url(https://picsum.photos/230/500)").article-thumb
+        .article-meta
+            .name Article Name
+            .date Dec 30, 1996
+
+section.articles
+    .flex.flex--center
+
+        .col-50
+            .article-wrap
+                +thumb
+                +thumb
+                +thumb
+                +thumb
+                +thumb
+                +thumb
+                +thumb
+                +thumb
+                +thumb
+                +thumb
+                +thumb
+                +thumb
+
+        .col-50.flex.flex--center.order-first
+            .col-1
+                .desc-wrap
+                    p.home-lead.outdented ...Writing and designing articles...
+                    a(href="").home-cta See All Articles

@@ -1,0 +1,61 @@
+section.articles
+    background:
+        //image: url(..imag/article-bg.jpg)
+        //repeat: repeat
+    
+    .col-1
+        display: flex
+        align-items: center
+    
+    .home-cta
+        color: white
+        background: #3d96cb
+    
+    .article-wrap
+        margin: -50px 0
+        +clearfix
+    
+    .article-thumb
+        display: block
+        background:
+            size: cover
+            position: center
+        width: 25%
+        float: left
+        position: relative
+        overflow: hidden
+
+        &:after
+            content: ''
+            display: block
+            padding-top: 100%
+    
+    .article-meta
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        background: fade-out(#3d96cb, 0.3)
+        color: white
+        padding: 10px
+        transform: translate(0%, 100%) scale(0.5)
+        transition: all 0.2s ease-in-out
+        opacity: 0
+
+        .name
+            font-size: 18px
+        
+        .date
+            font-style: italic
+    
+    .article-thumb:hover .article-meta
+        opacity: 1
+        transform: translate(0%, 0%) scale(1)
+    
+    @media (max-width: 640px)
+        .desc-wrap
+            margin-top: 100px
+        
+        .col-1
+            width: auto
