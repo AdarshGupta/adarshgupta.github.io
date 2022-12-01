@@ -1005,9 +1005,12 @@ section.design .home-cta {
 }
 section.design .dribbble, section.design .behance {
   background-color: #ea4c89;
-  background-img: url(/assets/img/design-bg.png);
+  background-image: url(/assets/img/design-bg.png);
   background-position: center;
   padding: 50px 0;
+  -webkit-transition: background-color 150ms ease-in-out;
+  -o-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
 }
 section.design .dribbble.behance, section.design .behance.behance {
   background-color: #1769ff;
@@ -1023,6 +1026,16 @@ section.design .design-img-link {
   -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
   margin: 5px;
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  transition: -webkit-transform 150ms ease-in-out;
+  -o-transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+}
+section.design .design-img-link:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 section.design .design-img-link img {
   width: 100%;
