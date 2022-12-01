@@ -1,0 +1,30 @@
+mixin design-img(link, img)
+    a(href="#{link}").design-img-link
+        img(src="assets/img/design-img/#{img}")
+
+section.design
+    .flex.flex--center
+
+        .col-50.flex.flex--center.dribbble
+            .col-1
+                p.home-lead ...Updating Dribbble...
+                +design-img('', 'drib-1.jpg')
+                +design-img('', 'drib-2.jpg')
+                +design-img('', 'drib-3.png')
+                +design-img('', 'drib-4.jpg')
+                +design-img('', 'drib-5.jpg')
+                +design-img('', 'drib-6.jpg')
+                .cf
+                a(href="").home-cta See more on Dribbble
+
+        .col-50.flex.flex--center.behance
+            .col-1
+                p.home-lead  ...and Behance...
+                +design-img('', 'be-1.png')
+                +design-img('', 'be-2.jpg')
+                +design-img('', 'be-3.jpg')
+                +design-img('', 'be-4.jpg')
+                +design-img('', 'be-5.jpg')
+                +design-img('', 'be-6.png')
+                .cf
+                a(href="").home-cta See more on Behance
