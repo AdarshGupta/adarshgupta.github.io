@@ -2,7 +2,29 @@ $(function(){
     mentoringBubbleClick();
     setInterval(function(){articleTada()}, 4000);
     designBGStuff();
+    smoothScroll(300);
+    mobileNav()
 });
+
+function mobileNav() {
+    $('.mobile-nav-toggle').on('click', function(){
+      $('.mobile-nav-toggle, .mobile-nav').toggleClass('is-open');
+    });
+}
+
+function smoothScroll (duration) {
+	$('a[href^="#"]').on('click', function(event) {
+
+	    var target = $( $(this).attr('href') );
+
+	    if( target.length ) {
+	        event.preventDefault();
+	        $('html, body').animate({
+	            scrollTop: target.offset().top
+	        }, duration);
+	    }
+	});
+}
 
 function designBGStuff(){
     $('.design-img-link').hover(function(){
