@@ -1051,6 +1051,110 @@ section.design .cf {
   }
 }
 
+section.notes {
+  background-image: url(../img/notes-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+section.notes .home-lead {
+  text-align: center;
+}
+section.notes .col-1 {
+  padding-left: 30px;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.8;
+}
+section.notes .col-1:first-child {
+  padding-left: 0;
+  padding-right: 30px;
+  text-align: right;
+  border-right: 2px solid white;
+}
+@media (max-width: 640px) {
+  section.notes .col-1 {
+    padding: 0 10px;
+    width: 100%;
+  }
+  section.notes .col-1:first-child {
+    padding: 0 10px;
+    text-align: left;
+    border: none;
+  }
+}
+section.notes a {
+  color: white;
+  text-decoration: underline;
+}
+section.notes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+section.notes p {
+  margin: 0;
+}
+section.notes .form-display {
+  background: rgba(255, 255, 255, 0.3);
+  border: 3px solid white;
+  -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px 0;
+}
+@media (max-width: 590px) {
+  section.notes .form-display {
+    display: block;
+  }
+}
+section.notes .form-display .mc-field-group {
+  position: relative;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+section.notes .form-display .mc-field-group:first-child {
+  border-right: 4px solid white;
+}
+@media (max-width: 590px) {
+  section.notes .form-display .mc-field-group:first-child {
+    border-right: none;
+    border-bottom: 4px solid white;
+  }
+}
+section.notes .form-display input {
+  position: relative;
+  border: 0;
+  background: none;
+  padding: 0;
+  display: block;
+  height: 60px;
+  width: 100%;
+  padding: 0 10px;
+  font-size: 18px;
+}
+section.notes .form-display input:focus {
+  outline: none;
+}
+section.notes .form-display input[type=submit] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: white;
+  color: #ba9e44;
+  font-size: 24px;
+  padding: 0 15px;
+}
+section.notes .form-display label {
+  position: absolute;
+  z-index: 2;
+  font-size: 12px;
+  left: 5px;
+}
+
 .home-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1105,7 +1209,7 @@ section.design .cf {
 .col-2 {
   max-width: 620px;
   margin: 0 10px;
-  background: honeydew;
+  width: 100%;
 }
 
 .col-50 {
