@@ -1220,6 +1220,23 @@ section.podcast .github {
   }
 }
 
+.home-footer a {
+  color: white;
+  background: #e24040;
+  display: block;
+  width: 100%;
+  line-height: 6;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 300;
+  -webkit-transition: background 0.15s ease-in-out;
+  -o-transition: background 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out;
+}
+.home-footer a:hover {
+  background: #d82121;
+}
+
 .home-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
