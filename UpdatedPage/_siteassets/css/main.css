@@ -892,6 +892,9 @@ section.articles .article-thumb:hover .article-meta {
   section.articles .col-1 {
     width: auto;
   }
+  section.articles .home-cta {
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 999px) and (min-width: 640px) {
   section.articles .article-thumb {
@@ -1105,7 +1108,7 @@ section.notes .form-display {
   display: flex;
   margin: 50px 0;
 }
-@media (max-width: 590px) {
+@media (max-width: 640px) {
   section.notes .form-display {
     display: block;
   }
@@ -1119,7 +1122,7 @@ section.notes .form-display .mc-field-group {
 section.notes .form-display .mc-field-group:first-child {
   border-right: 4px solid white;
 }
-@media (max-width: 590px) {
+@media (max-width: 640px) {
   section.notes .form-display .mc-field-group:first-child {
     border-right: none;
     border-bottom: 4px solid white;
@@ -1129,7 +1132,6 @@ section.notes .form-display input {
   position: relative;
   border: 0;
   background: none;
-  padding: 0;
   display: block;
   height: 60px;
   width: 100%;
@@ -1183,6 +1185,10 @@ section.podcast .podcast-thumb {
       -ms-flex-pack: center;
           justify-content: center;
 }
+section.podcast img {
+  width: 150px;
+  height: 150px;
+}
 section.podcast .podcast-text {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -1218,6 +1224,24 @@ section.podcast .github {
   section.podcast .web {
     margin-bottom: 20px;
   }
+  section.podcast .podcast-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section.podcast .podcast-thumb {
+    margin-right: 0px;
+  }
+  section.podcast .podcast-text {
+    padding-top: 20px;
+  }
 }
 
 .home-footer a {
@@ -1232,6 +1256,21 @@ section.podcast .github {
   -webkit-transition: background 0.15s ease-in-out;
   -o-transition: background 0.15s ease-in-out;
   transition: background 0.15s ease-in-out;
+}
+@media (max-width: 895px) {
+  .home-footer a {
+    font-size: 50px;
+  }
+}
+@media (max-width: 650px) {
+  .home-footer a {
+    font-size: 35px;
+  }
+}
+@media (max-width: 450px) {
+  .home-footer a {
+    font-size: 20px;
+  }
 }
 .home-footer a:hover {
   background: #d82121;
@@ -1290,8 +1329,7 @@ section.podcast .github {
 
 .col-2 {
   max-width: 620px;
-  margin: 0 10px;
-  width: 100%;
+  padding: 0 10px;
 }
 
 .col-50 {
@@ -1308,6 +1346,10 @@ section.podcast .github {
   }
   .col-1 {
     max-width: 100%;
+  }
+  .col-2 {
+    max-width: 100%;
+    width: auto;
   }
   .col-50 {
     width: auto;
