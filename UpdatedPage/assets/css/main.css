@@ -453,6 +453,105 @@ body {
   left: 0;
 }
 
+.home-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+}
+@media (max-width: 775px) {
+  .home-wrap {
+    display: block;
+  }
+}
+
+.home-sections {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.home-sections section {
+  padding: 50px 0;
+}
+.home-sections .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: rows;
+          flex-direction: rows;
+}
+.home-sections .flex--center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.home-sections .flex--space-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.home-sections .order-first {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+.col-1 {
+  width: 320px;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.col-2 {
+  max-width: 620px;
+  padding: 0 10px;
+}
+
+.col-50 {
+  width: 50%;
+}
+
+.push-right {
+  margin-left: 330px;
+}
+
+@media (max-width: 640px) {
+  .home-sections .flex {
+    display: block;
+  }
+  .col-1 {
+    max-width: 100%;
+    width: auto;
+  }
+  .col-2 {
+    max-width: 100%;
+    width: auto;
+  }
+  .col-50 {
+    width: auto;
+  }
+  .push-right {
+    margin-left: 10px;
+  }
+}
+.home-lead {
+  font-size: 36px;
+  line-height: 1.1;
+}
+.home-lead.outdented {
+  text-indent: -0.69em;
+}
+
+@media (max-width: 640px) {
+  .home-lead {
+    text-align: center;
+  }
+  .home-lead.outdented {
+    text-indent: 0;
+  }
+}
 .home-wrap header {
   width: 135px;
   background: white;
@@ -556,7 +655,7 @@ body {
   position: absolute;
   width: 100%;
   background: white;
-  padding: 30px 0 20px;
+  padding: 0;
   -webkit-transform: translateY(-100%);
       -ms-transform: translateY(-100%);
           transform: translateY(-100%);
@@ -576,8 +675,12 @@ body {
 
 @media (max-width: 775px) {
   .home-wrap header {
-    width: auto;
+    width: 100%;
     padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
   }
   .home-wrap header .header-position {
     position: relative;
@@ -610,6 +713,10 @@ body {
     -webkit-transform: translateY(0%);
         -ms-transform: translateY(0%);
             transform: translateY(0%);
+    position: fixed;
+    z-index: 5;
+    top: 90px;
+    left: 0;
   }
 }
 section.about {
@@ -634,6 +741,11 @@ section.about .home-lead {
     margin-left: auto;
     margin-right: auto;
     max-width: 300px;
+  }
+}
+@media (max-width: 775px) {
+  section.about {
+    padding: 140px 0 50px;
   }
 }
 section.youtube {
@@ -1274,103 +1386,4 @@ section.podcast .github {
 }
 .home-footer a:hover {
   background: #d82121;
-}
-
-.home-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-}
-@media (max-width: 775px) {
-  .home-wrap {
-    display: block;
-  }
-}
-
-.home-sections {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-.home-sections section {
-  padding: 50px 0;
-}
-.home-sections .flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: rows;
-          flex-direction: rows;
-}
-.home-sections .flex--center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.home-sections .flex--space-around {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-.home-sections .order-first {
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
-}
-
-.col-1 {
-  width: 320px;
-  padding: 0 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.col-2 {
-  max-width: 620px;
-  padding: 0 10px;
-}
-
-.col-50 {
-  width: 50%;
-}
-
-.push-right {
-  margin-left: 330px;
-}
-
-@media (max-width: 640px) {
-  .home-sections .flex {
-    display: block;
-  }
-  .col-1 {
-    max-width: 100%;
-  }
-  .col-2 {
-    max-width: 100%;
-    width: auto;
-  }
-  .col-50 {
-    width: auto;
-  }
-  .push-right {
-    margin-left: 10px;
-  }
-}
-.home-lead {
-  font-size: 36px;
-  line-height: 1.1;
-}
-.home-lead.outdented {
-  text-indent: -0.69em;
-}
-
-@media (max-width: 640px) {
-  .home-lead {
-    text-align: center;
-  }
-  .home-lead.outdented {
-    text-indent: 0;
-  }
 }
