@@ -1,26 +1,45 @@
 section.about
-    background: url(../img/about-bg.jpg)
-        position: center bottom
-        size: cover
+    background:  #F38181 url(../img/profile-bg.png)
+        position: left bottom
+        size: contain
+        repeat: no-repeat
+
+    h1
+        font-size: clamp(14px, 4vw, 16px)
+        color: #3f3f42
 
     h2
         color: #3f3f42
         font:
-            size: 60px
-            weight: 400
+            size: clamp(50px, 8vw, 80px)
+            weight: 600
         line-height: 1
         margin-left: -108px
         margin-top: 0
+        margin-bottom: 20px
     
     .home-lead
         padding-bottom: 180px
+        font-size: clamp(16px, 5vw, 20px)
+    
+    .col-1
+        width: 500px
+        margin-bottom: 80px
 
 @media (max-width: 640px)
     section.about
-        h2, .home-lead
+
+        h1
+            text-align: center
+
+        h1, h2, .home-lead
             margin-left: auto
             margin-right: auto
-            max-width: 300px
+            max-width: 320px
+            margin-top: 35px
+    
+        .col-1
+            width: auto
 
 @media (max-width: 775px)
     section.about

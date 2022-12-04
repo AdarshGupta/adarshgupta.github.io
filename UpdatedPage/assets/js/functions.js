@@ -3,7 +3,8 @@ $(function(){
     setInterval(function(){articleTada()}, 4000);
     designBGStuff();
     smoothScroll(300);
-    mobileNav()
+    mobileNav();
+    projectNav();
 });
 
 function mobileNav() {
@@ -140,3 +141,53 @@ $(window).resize(function(){
         mentoringNarrowStart();
     }
 });
+
+
+// Project panel switch based on project selection
+function projectNav() {
+
+    $('.proj-Btn').on('click', function(){
+        var $this = $(this);
+
+        $this.addClass('selected')
+            .siblings().removeClass('selected');
+        
+        
+        // Set accent color as per company theme color
+        var btnText = $('.selected').text();
+        if(btnText.includes("Optum")){
+            $('.selected').css('color', '#E87722')
+                .siblings().css('color', '#8892b0'); // default color
+            
+            $('.highlighter').css('background', '#E87722');
+        }
+        else if(btnText.includes("Bayer")){
+            $('.selected').css('color', '#01BEFF')
+                .siblings().css('color', '#8892b0'); // default color
+            
+            $('.highlighter').css('background', '#01BEFF');
+        }
+        else{
+            $('.selected').css('color', '#64ffda')
+                .siblings().css('color', '#8892b0'); // default color
+            
+            $('.highlighter').css('background', '#64ffda');
+        }
+        
+        // Find the corresponding job description panel for the respective button
+        var target = '#' + $this.data('panel');
+
+        $(target).css({
+            "visibility": "visible",
+            "opacity": "1"
+        })
+        .siblings('.projPanel').css({
+            "visibility": "hidden",
+            "opacity": "0"
+        });
+
+
+        // Left border highlight on the button/tab selected
+        $('.highlighter').css('transform', 'translateY(calc(' + $this.index() + ' * 42px))');
+    });
+}
