@@ -1,0 +1,77 @@
+section.education
+    background: #00BCD4
+    overflow: hidden
+
+    .col-1
+        position: relative
+        height: 500px
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+        @media (max-width: 640px)
+            display: block
+            height: auto
+            width: auto
+            padding: 50px 20px
+
+            &:last-child
+                padding: 0 20px 50px
+
+    h2.section-heading
+        color: #333
+        width: 400px
+    
+    h2.section-heading:after
+        background-color: #5D5D5D
+
+    h3.home-lead
+        white-space: nowrap
+        color: #333
+        margin-bottom: 0
+        font-weight: 500
+
+    .fa-solid
+        margin-right: 5px
+    
+    p.location
+        color: #3f3f42
+        margin-top: 7px
+        margin-left: 11px
+    
+    h4.degree
+        color: black
+        white-space: nowrap
+        margin-bottom: 0
+    
+    p.cgpa
+        color: black
+    
+    .courses-strip
+        position: absolute
+        top: 0
+        margin: -50px 0
+        margin-left: 200px      
+        width: 100px
+        height: 1000vh
+        
+        @media (max-width: 640px)
+            display: none
+    
+        .courses-1
+            margin: 0
+            width: auto
+            writing-mode: vertical-rl
+            text-orientation: sideways
+            color: black
+        
+        .courses-2
+            width: auto
+            writing-mode: vertical-rl
+            text-orientation: sideways
+            color: white
+        
+        .course
+            margin: 0 0 15px 0
+            font-weight: 600
+            font-size: 18px

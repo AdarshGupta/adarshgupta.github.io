@@ -474,6 +474,32 @@ body {
 .home-sections section {
   padding: 50px 0;
 }
+.home-sections section .section-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-bottom: 40px;
+  width: 100%;
+  font-size: clamp(26px, 5vw, 32px);
+  font-weight: 600;
+  white-space: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ccd6f6;
+  line-height: 1.1;
+}
+.home-sections section .section-heading:after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0px;
+  width: 400px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: #233554;
+}
 .home-sections .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -772,6 +798,301 @@ section.about .col-1 {
     padding: 140px 0 50px;
   }
 }
+section.work {
+  background: #0a192f;
+}
+section.work .col-2 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+section.work .grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 600px) {
+  section.work .grid {
+    display: block;
+  }
+}
+@media (min-width: 700px) {
+  section.work .grid {
+    min-height: 560px;
+  }
+}
+section.work .tabsPanel {
+  position: relative;
+  z-index: 3;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0;
+  margin: 0;
+}
+section.work .tabsPanel button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 0;
+  position: relative;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 42px;
+  padding: 0px 20px 2px;
+  border-left: 2px solid #233554;
+  background-color: transparent;
+  color: #8892b0;
+  font-size: 13px;
+  text-align: left;
+  white-space: nowrap;
+}
+section.work .tabsPanel button.selected {
+  color: #E87722;
+}
+section.work .tabsPanel .proj-Btn:hover {
+  color: #E87722;
+  background-color: #112240;
+}
+section.work .tabsPanel #Bayer-btn:hover {
+  color: #01BEFF;
+}
+section.work .tabsPanel .highlighter {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 2px;
+  height: 42px;
+  border-radius: 4px;
+  background: #E87722;
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+  transition: -webkit-transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+  -o-transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s, -webkit-transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+section.work .expPanel {
+  position: relative;
+  width: 100%;
+  margin-left: 20px;
+}
+section.work .expPanel h3 {
+  margin: 0 0 2px 0;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #ccd6f6;
+}
+section.work .expPanel h3 .company {
+  color: #E87722;
+}
+section.work .expPanel h3 .company a.inline-link {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  position: relative;
+  color: inherit;
+}
+section.work .expPanel h3 .company a.inline-link:hover:after {
+  width: 100%;
+}
+section.work .expPanel h3 .company a.inline-link:after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 1px;
+  position: relative;
+  bottom: 0.15em;
+  background-color: #E87722;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  opacity: 0.7;
+}
+section.work .expPanel p {
+  margin: 0;
+  margin-bottom: 25px;
+  color: #a8b2d1;
+  font-size: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+section.work .expPanel .description {
+  font-size: 18px;
+  color: #8892b0;
+  line-height: 1.3;
+}
+section.work .expPanel .description ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+section.work .expPanel .description ul li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+section.work .expPanel .description ul li:before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #E87722;
+}
+section.work .expPanel .projPanel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: visibility 0s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+  -o-transition: visibility 0s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+  transition: visibility 0s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+section.work .expPanel #LSDWPanel {
+  visibility: visible;
+  opacity: 1;
+}
+section.work .expPanel #CMRPanel {
+  visibility: hidden;
+  opacity: 0;
+}
+section.work .expPanel #OPAPanel {
+  visibility: hidden;
+  opacity: 0;
+}
+section.work .expPanel #CMGAPanel {
+  visibility: hidden;
+  opacity: 0;
+}
+section.work .expPanel #BayerPanel {
+  visibility: hidden;
+  opacity: 0;
+}
+section.work .expPanel #BayerPanel .company {
+  color: #01BEFF;
+}
+section.work .expPanel #BayerPanel a.inline-link:after {
+  background-color: #01BEFF;
+}
+section.work .expPanel #BayerPanel ul li:before {
+  color: #01BEFF;
+}
+section.work .expPanel .Optum {
+  color: #E87722;
+}
+section.work .expPanel .Bayer {
+  color: #01BEFF;
+}
+
+section.education {
+  background: #00BCD4;
+  overflow: hidden;
+}
+section.education .col-1 {
+  position: relative;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 640px) {
+  section.education .col-1 {
+    display: block;
+    height: auto;
+    width: auto;
+    padding: 50px 20px;
+  }
+  section.education .col-1:last-child {
+    padding: 0 20px 50px;
+  }
+}
+section.education h2.section-heading {
+  color: #333;
+  width: 400px;
+}
+section.education h2.section-heading:after {
+  background-color: #5D5D5D;
+}
+section.education h3.home-lead {
+  white-space: nowrap;
+  color: #333;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+section.education .fa-solid {
+  margin-right: 5px;
+}
+section.education p.location {
+  color: #3f3f42;
+  margin-top: 7px;
+  margin-left: 11px;
+}
+section.education h4.degree {
+  color: black;
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+section.education p.cgpa {
+  color: black;
+}
+section.education .courses-strip {
+  position: absolute;
+  top: 0;
+  margin: -50px 0;
+  margin-left: 200px;
+  width: 100px;
+  height: 1000vh;
+}
+@media (max-width: 640px) {
+  section.education .courses-strip {
+    display: none;
+  }
+}
+section.education .courses-strip .courses-1 {
+  margin: 0;
+  width: auto;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-text-orientation: sideways;
+          text-orientation: sideways;
+  color: black;
+}
+section.education .courses-strip .courses-2 {
+  width: auto;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-text-orientation: sideways;
+          text-orientation: sideways;
+  color: white;
+}
+section.education .courses-strip .course {
+  margin: 0 0 15px 0;
+  font-weight: 600;
+  font-size: 18px;
+}
+
 section.youtube {
   background-image: url(../img/youtube-bg.gif);
   background-color: #e20a0a;
@@ -1410,223 +1731,4 @@ section.podcast .github {
 }
 .home-footer a:hover {
   background: #d82121;
-}
-
-section.work {
-  background: #0a192f;
-}
-section.work .col-2 {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-section.work .grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-@media (max-width: 600px) {
-  section.work .grid {
-    display: block;
-  }
-}
-@media (min-width: 700px) {
-  section.work .grid {
-    min-height: 560px;
-  }
-}
-section.work .section-heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  margin-bottom: 40px;
-  width: 100%;
-  font-size: clamp(26px, 5vw, 32px);
-  font-weight: 600;
-  white-space: nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #ccd6f6;
-  line-height: 1.1;
-}
-section.work .section-heading:after {
-  content: "";
-  display: block;
-  position: relative;
-  top: 0px;
-  width: 400px;
-  height: 1px;
-  margin-left: 20px;
-  background-color: #233554;
-}
-section.work .tabsPanel {
-  position: relative;
-  z-index: 3;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0;
-  margin: 0;
-}
-section.work .tabsPanel button {
-  cursor: pointer;
-  border: 0;
-  border-radius: 0;
-  position: relative;
-  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 42px;
-  padding: 0px 20px 2px;
-  border-left: 2px solid #233554;
-  background-color: transparent;
-  color: #8892b0;
-  font-size: 13px;
-  text-align: left;
-  white-space: nowrap;
-}
-section.work .tabsPanel button.selected {
-  color: #E87722;
-}
-section.work .tabsPanel .highlighter {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 10;
-  width: 2px;
-  height: 42px;
-  border-radius: 4px;
-  background: #E87722;
-  -webkit-transform: translateY(0px);
-      -ms-transform: translateY(0px);
-          transform: translateY(0px);
-  -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
-  transition: -webkit-transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
-  -o-transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
-  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
-  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s, -webkit-transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
-}
-section.work .expPanel {
-  position: relative;
-  width: 100%;
-  margin-left: 20px;
-}
-section.work .expPanel h3 {
-  margin: 0 0 2px 0;
-  color: white;
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 1.3;
-  color: #ccd6f6;
-}
-section.work .expPanel h3 .company {
-  color: #E87722;
-}
-section.work .expPanel h3 .company a.inline-link {
-  display: inline-block;
-  text-decoration: none;
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
-  position: relative;
-  color: inherit;
-}
-section.work .expPanel h3 .company a.inline-link:hover:after {
-  width: 100%;
-}
-section.work .expPanel h3 .company a.inline-link:after {
-  content: "";
-  display: block;
-  width: 0px;
-  height: 1px;
-  position: relative;
-  bottom: 0.15em;
-  background-color: #E87722;
-  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  opacity: 0.7;
-}
-section.work .expPanel p {
-  margin: 0;
-  margin-bottom: 25px;
-  color: #a8b2d1;
-  font-size: 13px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-section.work .expPanel .description {
-  font-size: 18px;
-  color: #8892b0;
-  line-height: 1.3;
-}
-section.work .expPanel .description ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-section.work .expPanel .description ul li {
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 10px;
-}
-section.work .expPanel .description ul li:before {
-  content: "▹";
-  position: absolute;
-  left: 0;
-  color: #E87722;
-}
-section.work .expPanel .projPanel {
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transition: visibility 0s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
-  -o-transition: visibility 0s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
-  transition: visibility 0s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
-}
-section.work .expPanel #LSDWPanel {
-  visibility: visible;
-  opacity: 1;
-}
-section.work .expPanel #CMRPanel {
-  visibility: hidden;
-  opacity: 0;
-}
-section.work .expPanel #OPAPanel {
-  visibility: hidden;
-  opacity: 0;
-}
-section.work .expPanel #CMGAPanel {
-  visibility: hidden;
-  opacity: 0;
-}
-section.work .expPanel #BayerPanel {
-  visibility: hidden;
-  opacity: 0;
-}
-section.work .expPanel #BayerPanel .company {
-  color: #01BEFF;
-}
-section.work .expPanel #BayerPanel a.inline-link:after {
-  background-color: #01BEFF;
-}
-section.work .expPanel #BayerPanel ul li:before {
-  color: #01BEFF;
-}
-section.work .expPanel .Optum {
-  color: #E87722;
-}
-section.work .expPanel .Bayer {
-  color: #01BEFF;
 }

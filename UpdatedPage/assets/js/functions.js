@@ -79,8 +79,17 @@ $(window).scroll(function(){
 
 function youtubeVidScroll(){
     var wScroll = $(window).scrollTop();
+    var eduSectionPos = $('section.education').offset().top;
+    var triggerPoint = eduSectionPos - $(window).height()
 
-    $('.video-strip').css('background-position', 'center -' + wScroll +'px')
+    if(triggerPoint < wScroll){
+        $('.courses-1').css('margin-top', '-' + (wScroll - triggerPoint) +'px');
+        $('.courses-2').css('margin-top', '-' + (wScroll - triggerPoint) +'px');
+        // $('.courses-1').css('margin-top', 'calc(-350% + ' + (wScroll - triggerPoint) +'px');
+        //$('.courses-2').css('margin-top', 'calc(-450% + ' + (wScroll - triggerPoint) +'px');
+
+        $('.video-strip').css('background-position','center -'+ wScroll +'px');
+    }
 }
 
 function startMentoring(){
