@@ -29,9 +29,9 @@ function smoothScroll (duration) {
 
 function designBGStuff(){
     $('.design-img-link').hover(function(){
-        $(this).parent().parent().css('background-color', $(this).data('color'));
+        $(this).parent().parent().parent().css('background-color', $(this).data('color'));
     }, function(){
-        $(this).parent().parent().css('background-color', $(this).parent().parent().data('orig-color'));
+        $(this).parent().parent().parent().css('background-color', $(this).parent().parent().parent().data('orig-color'));
     });
 }
 

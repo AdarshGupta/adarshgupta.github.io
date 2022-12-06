@@ -506,8 +506,8 @@ body {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: rows;
-          flex-direction: rows;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 .home-sections .flex--center {
   -webkit-box-pack: center;
@@ -1093,6 +1093,104 @@ section.education .courses-strip .course {
   font-size: 18px;
 }
 
+section.skills {
+  color: white;
+  padding: 0;
+  height: autp;
+  position: relative;
+}
+section.skills .skill-section {
+  height: 100%;
+}
+section.skills h2.section-heading {
+  color: #333;
+  width: 400px;
+  position: absolute;
+  top: 30px;
+  left: 165px;
+}
+section.skills h2.section-heading:after {
+  background-color: #5D5D5D;
+}
+section.skills .col-25 {
+  width: 25%;
+  padding: 150px 0 50px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: red;
+}
+section.skills .col-25:first-child {
+  margin-left: 135px;
+}
+section.skills .col-25 .col-1 {
+  padding: 0 35px;
+}
+section.skills .col-25 .col-1 .container {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+section.skills .home-lead {
+  text-align: center;
+  font-size: 30px;
+  height: 66px;
+}
+section.skills .skill-section-1, section.skills .skill-section-2, section.skills .skill-section-3, section.skills .skill-section-4 {
+  background-color: #3EC1D3;
+  background-image: url(/assets/img/design-bg.png);
+  background-position: center;
+  -webkit-transition: background-color 150ms ease-in-out;
+  -o-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  color: black;
+  color-.design-img-link: hover;
+  color-.design-img-link-background-color: rgba(0, 0, 0, 0.3);
+}
+section.skills .skill-section-1.skill-section-2, section.skills .skill-section-2.skill-section-2, section.skills .skill-section-3.skill-section-2, section.skills .skill-section-4.skill-section-2 {
+  background-color: #F6F7D7;
+}
+section.skills .skill-section-1.skill-section-3, section.skills .skill-section-2.skill-section-3, section.skills .skill-section-3.skill-section-3, section.skills .skill-section-4.skill-section-3 {
+  background-color: #FF9A00;
+}
+section.skills .skill-section-1.skill-section-4, section.skills .skill-section-2.skill-section-4, section.skills .skill-section-3.skill-section-4, section.skills .skill-section-4.skill-section-4 {
+  background-color: #FF165D;
+}
+section.skills .design-img-link {
+  float: left;
+  width: 35%;
+  aspect-ratio: 1/1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border: 2px solid black;
+  color: black;
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  margin: 5px;
+  margin-top: 50px;
+  -webkit-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+section.skills .design-img-link:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+@media (max-width: 640px) {
+  section.skills .col-1 {
+    width: auto;
+  }
+}
+
 section.youtube {
   background-image: url(../img/youtube-bg.gif);
   background-color: #e20a0a;
@@ -1415,8 +1513,8 @@ section.insta .img-strip {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: rows;
-          flex-direction: rows;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

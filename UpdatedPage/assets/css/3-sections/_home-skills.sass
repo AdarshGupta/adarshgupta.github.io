@@ -1,0 +1,81 @@
+section.skills
+    color: white
+    padding: 0
+    height: autp
+    position: relative
+
+    .skill-section
+        height: 100%
+    
+    h2.section-heading
+        color: #333
+        width: 400px
+        position: absolute
+        top: 30px
+        left: 165px
+
+    h2.section-heading:after
+        background-color: #5D5D5D
+
+    .col-25
+        width: 25%
+        padding: 150px 0 50px 0
+        box-sizing: border-box
+        background: red
+
+        &:first-child
+            margin-left: 135px
+        
+        .col-1
+            padding: 0 35px
+        
+            .container
+                flex-wrap: wrap
+
+    .home-lead
+        text-align: center
+        font-size: 30px
+        height: 66px
+    
+    .skill-section-1, .skill-section-2, .skill-section-3, .skill-section-4
+        background:
+            color: #3EC1D3
+            image: url(/assets/img/design-bg.png)
+            position: center
+        transition: background-color 150ms ease-in-out
+        color: black
+
+            .design-img-link:hover
+                background-color: rgba(black, 0.3)
+
+        &.skill-section-2
+            background-color: #F6F7D7
+        
+        &.skill-section-3
+            background-color: #FF9A00
+        
+        &.skill-section-4
+            background-color: #FF165D
+
+    .design-img-link
+        float: left
+        width: 35%
+        aspect-ratio: 1 / 1
+        display: flex
+        flex-direction: column
+        justify-content: center
+        text-align: center
+        border: 2px solid black
+        color: black
+        box-shadow: 0px 3px 10px rgba(0,0,0,0.2)
+        margin: 5px
+        margin-top: 50px
+        transition: all 150ms ease-in-out
+        
+        &:hover
+            transform: scale(1.1)
+            background-color: rgba(white, 0.3)
+    
+    @media (max-width: 640px)
+        .col-1
+            width: auto
