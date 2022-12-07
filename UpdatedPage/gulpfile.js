@@ -34,7 +34,7 @@ function jekyllBuild(done) {
  */
 function jekyllRebuild(done){
     browserSync.reload();
-    done()
+    done();
 }
 
 function serve() {

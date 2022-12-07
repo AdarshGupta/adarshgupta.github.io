@@ -1,0 +1,135 @@
+section.hobbies
+    background: white
+    padding: 0px
+
+    .hobby-head
+        margin-left: 135px
+    
+    .col-1
+        display: flex
+        align-items: center
+    
+    .hobbies-wrap
+        flex-wrap: wrap
+    
+    .hobby-thumb, .youtube-thumb, .side-proj
+        display: block
+        background:
+            size: cover
+            position: center
+        width: 33.333333%
+        position: relative
+        overflow: hidden
+        opacity: 0
+        transition: all 0.3s ease-in-out
+
+        &.is-visible
+            opacity: 1
+
+        &.is-emph
+            animation-name: tada
+            animation-duration: 1s
+            animation-fill-mode: both
+            z-index: 1
+
+        &:after
+            content: ''
+            display: block
+            padding-top: 100%
+    
+    .youtube-thumb
+        display: flex
+        flex-direction: column
+        justify-content: center
+        text-align: center
+    
+    .fa-youtube
+        color: black
+        font-size: 80px
+        position: absolute
+        width: 100%
+    
+    .hobby-meta
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        background: fade-out(#3d96cb, 0.3)
+        color: white
+        padding: 10px
+        transform: translate(0%, 100%) scale(0.5)
+        transition: all 0.2s ease-in-out
+        opacity: 0
+
+        .name
+            font-size: 18px
+            line-height: 1.2
+        
+        .thumb-desc
+            font-style: italic
+    
+    .hobby-thumb:hover .hobby-meta, .side-proj:hover .hobby-meta
+        opacity: 1
+        transform: translate(0%, 0%) scale(1)
+    
+    .col-1
+        width: 70%
+        flex-direction: column
+        justify-content: center
+
+        .desc-wrap
+            text-align: center
+
+        .social-links
+            width: 30%
+
+
+            .icons
+                font-size: 36px
+                color: lightgrey
+            
+            .fa-instagram:hover
+                color: #FE2C43
+            
+            .fa-github:hover
+                color: #24292F
+
+            
+    
+    @media (max-width: 640px)
+        .desc-wrap
+            margin-top: 100px
+        
+        .col-1
+            width: auto
+        
+        .icons
+            margin-bottom: 20px
+    
+    @media (max-width: 999px) and (min-width: 640px)
+        .hobby-thumb
+            width: 33.3%
+
+// From animate.css - https://github.com/animate-css/animate.css/blob/main/source/attention_seekers/tada.css
+@keyframes tada 
+  from 
+    transform: scale3d(1, 1, 1)
+  
+  10%,
+  20% 
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg)
+  
+  30%,
+  50%,
+  70%,
+  90% 
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+  
+  40%,
+  60%,
+  80% 
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+  
+  to 
+    transform: scale3d(1, 1, 1)
