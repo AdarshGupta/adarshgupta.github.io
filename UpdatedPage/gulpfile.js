@@ -1,18 +1,26 @@
+'use strict';
+
 const browserSync = require('browser-sync');
 const cp = require('child_process');
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const jade = require('gulp-jade');
+const concat = require('gulp-concat');
+const minify = require('gulp-minify');
+const cleanCss = require('gulp-clean-css');
 
 var paths = {
     jekyll: {
-        src: './app',
         dest: '_site',
     },
     styles: {
         src: 'assets/css/main.scss',
         dest: 'assets/css',
+    },
+    javascript: {
+        src: 'assets/js',
+        dest: 'assets/js',
     }
 };
 
@@ -40,10 +48,19 @@ function jekyllRebuild(done){
 function serve() {
     browserSync.init({
         server: {
-            baseDir: '_site'
+            baseDir: paths.jekyll.dest
         },
         notify: true
     });
+}
+
+/**
+ * Compile Jade into HTML files
+ */
+ function jadeToHTML(){
+    return gulp.src('_jadefiles/*.jade')
+    .pipe(jade())
+    .pipe(gulp.dest('_includes'));
 }
 
 /**
@@ -52,21 +69,28 @@ function serve() {
 function styles() {
     return gulp.src(paths.styles.src)
         .pipe(sass({
-            includePaths: ['css']
+            includePaths: ['css']           //The SASS compiler uses each path here when resolving SASS @imports.
         }).on('error', sass.logError))
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(gulp.dest(paths.jekyll.dest + 'assets/css'))
+        .pipe(cleanCss())
+        .pipe(gulp.dest(paths.jekyll.dest + '/assets/css'))
         .pipe(browserSync.stream())
         .pipe(gulp.dest(paths.styles.dest));
 }
 
 /**
- * Compile Jade into HTML files
+ * Compile JS files into a single main.js
  */
-function jadeToHTML(){
-    return gulp.src('_jadefiles/*.jade')
-    .pipe(jade())
-    .pipe(gulp.dest('_includes'));
+function mergeJS(){
+    return gulp.src([paths.javascript.src + '/thumbnailData.js', paths.javascript.src + '/functions.js'])
+        .pipe(concat('main.js'))
+        .pipe(minify({
+            ext: {
+                min: '.js'
+            },
+            noSource: true
+        }))
+        .pipe(gulp.dest(paths.jekyll.dest + '/assets/js'));
 }
 
 /**
@@ -74,15 +98,17 @@ function jadeToHTML(){
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 function watch() {
-    gulp.watch(['assets/css/**/*.scss', 'assets/css/**/*.sass'], gulp.series(styles, jekyllBuild, jekyllRebuild));
-    gulp.watch('_jadefiles/*.jade', gulp.series(jadeToHTML)); // Updated "_includes" which triggers a reload auto.
-    gulp.watch(['index.html', '_layouts/*.html', '_includes/*', 'assets/js/**'], gulp.series(jekyllBuild, jekyllRebuild));
+    gulp.watch(['assets/css/**/*.scss', 'assets/css/**/*.sass'], styles);
+    gulp.watch('assets/js/**', gulp.series(mergeJS));
+    gulp.watch('_jadefiles/*.jade', gulp.series(jadeToHTML)); // Updates "_includes" which triggers a reload auto.
+    gulp.watch(['index.html', '_layouts/*.html', '_includes/*'], gulp.series(jekyllBuild, jekyllRebuild));
 }
 
 exports.jekyllBuild = jekyllBuild;
-exports.jekyllRebuild = gulp.series(jekyllBuild, jekyllRebuild);
-exports.default = gulp.series(styles, jekyllBuild, gulp.parallel(serve, watch));
 exports.serve = serve;
 exports.styles = styles;
+exports.mergeJS = mergeJS;
 exports.watch = watch;
 exports.jadeToHTML = jadeToHTML;
+exports.jekyllRebuild = gulp.series(jekyllBuild, jekyllRebuild);
+exports.default = gulp.series(styles, mergeJS, jekyllBuild, gulp.parallel(serve, watch));
