@@ -631,10 +631,30 @@ body {
 .home-wrap header .site-nav li:last-child {
   margin-bottom: 0;
 }
-.home-wrap header .email-link {
-  display: block;
-  text-align: right;
-  padding-right: 20px;
+.home-wrap header .social-links {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.home-wrap header .social-links .icons {
+  font-size: 24px;
+  color: darkgrey;
+}
+.home-wrap header .social-links .fa-github:hover {
+  color: #24292F;
+}
+.home-wrap header .social-links .fa-linkedin:hover {
+  color: #0F78D4;
+}
+.home-wrap header .social-links .fa-envelope-open:hover {
+  color: #CA473A;
 }
 .home-wrap header .mobile-nav-toggle {
   display: none;
@@ -1108,7 +1128,7 @@ section.skills h2.section-heading {
   width: 400px;
   position: absolute;
   top: 30px;
-  left: 165px;
+  left: 205px;
 }
 section.skills h2.section-heading:after {
   background-color: #5D5D5D;
@@ -1506,6 +1526,7 @@ section.articles .article-thumb:hover .article-meta {
   background: #e24040;
   display: block;
   width: 100%;
+  margin-left: 135px;
   line-height: 6;
   text-align: center;
   font-size: 60px;
