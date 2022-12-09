@@ -21,6 +21,10 @@ var paths = {
     javascript: {
         src: 'assets/js',
         dest: 'assets/js',
+    },
+    images: {
+        src: 'assets/img/**',
+        dest: 'assets/img',
     }
 };
 
@@ -64,7 +68,7 @@ function serve() {
 }
 
 /**
- * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
+ * Compile files from _scss into both _site/assets/css/main.css (for live injecting)
  */
 function styles() {
     return gulp.src(paths.styles.src)
@@ -79,7 +83,7 @@ function styles() {
 }
 
 /**
- * Compile JS files into a single main.js
+ * Compile JS files into a single _site/assets/js/main.js
  */
 function mergeJS(){
     return gulp.src([paths.javascript.src + '/thumbnailData.js', paths.javascript.src + '/functions.js'])
@@ -94,12 +98,21 @@ function mergeJS(){
 }
 
 /**
+ * Copy images
+ */
+function copyImages(){
+    return gulp.src(paths.images.src)
+        .pipe(gulp.dest(paths.jekyll.dest + '/' + paths.images.dest));
+}
+
+/**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 function watch() {
-    gulp.watch(['assets/css/**/*.scss', 'assets/css/**/*.sass'], styles);
+    gulp.watch(['assets/css/**/*.scss', 'assets/css/**/*.sass'], gulp.series(styles));
     gulp.watch('assets/js/**', gulp.series(mergeJS));
+    gulp.watch('assets/img/**', gulp.series(copyImages));
     gulp.watch('_jadefiles/*.jade', gulp.series(jadeToHTML)); // Updates "_includes" which triggers a reload auto.
     gulp.watch(['index.html', '_layouts/*.html', '_includes/*'], gulp.series(jekyllBuild, jekyllRebuild));
 }
@@ -108,7 +121,8 @@ exports.jekyllBuild = jekyllBuild;
 exports.serve = serve;
 exports.styles = styles;
 exports.mergeJS = mergeJS;
+exports.copyImages = gulp.series(copyImages);
 exports.watch = watch;
 exports.jadeToHTML = jadeToHTML;
 exports.jekyllRebuild = gulp.series(jekyllBuild, jekyllRebuild);
-exports.default = gulp.series(styles, mergeJS, jekyllBuild, gulp.parallel(serve, watch));
+exports.default = gulp.series(styles, mergeJS, copyImages, jekyllBuild, gulp.parallel(serve, watch));
