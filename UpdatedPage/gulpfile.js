@@ -110,9 +110,9 @@ function copyImages(){
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 function watch() {
-    gulp.watch(['assets/css/**/*.scss', 'assets/css/**/*.sass'], gulp.series(styles));
-    gulp.watch('assets/js/**', gulp.series(mergeJS));
-    gulp.watch('assets/img/**', gulp.series(copyImages));
+    gulp.watch(['assets/css/**/*.scss', 'assets/css/**/*.sass'], gulp.series(styles, jekyllRebuild));
+    gulp.watch('assets/js/**', gulp.series(mergeJS, jekyllRebuild));
+    gulp.watch('assets/img/**', gulp.series(copyImages, jekyllRebuild));
     gulp.watch('_jadefiles/*.jade', gulp.series(jadeToHTML)); // Updates "_includes" which triggers a reload auto.
     gulp.watch(['index.html', '_layouts/*.html', '_includes/*'], gulp.series(jekyllBuild, jekyllRebuild));
 }

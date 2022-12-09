@@ -2,8 +2,29 @@ $(function(){
     smoothScroll(300);
     mobileNav();
     projectNav();
-    setInterval(function(){hobbyTada()}, 4000);
-    setInterval(function(){imageRotate()}, 5000);
+
+    // Only invoke when hobbies section is in the view
+    setInterval(function(){
+        var wScroll = $(window).scrollTop();
+        var hobbiesSectionPos = $('section.hobbies').offset().top;
+        var footerSectionPos = $('footer.home-footer').offset().top;
+
+        if(wScroll > hobbiesSectionPos - $(window).height() && wScroll < footerSectionPos){
+            hobbyTada();
+        }
+        
+    }, 4000);
+
+    setInterval(function(){
+        var wScroll = $(window).scrollTop();
+        var hobbiesSectionPos = $('section.hobbies').offset().top;
+        var footerSectionPos = $('footer.home-footer').offset().top;
+
+        if(wScroll > hobbiesSectionPos - $(window).height() && wScroll < footerSectionPos){
+            imageRotate();
+        }
+
+    }, 5000);
     designBGStuff();
 });
 
@@ -91,12 +112,14 @@ function hobbyTada(){
 }
 
 function imageRotate(){
+
     var randomPic = Math.floor(Math.random() * thumbnailData.length);
     var randThumbElement = Math.floor(Math.random() * $('.hobby-thumb').length);
 
     $('.hobby-thumb').eq(randThumbElement).css('background-image', 'url(' + thumbnailData[randomPic]["path"] + ')')
                                         .attr('href', thumbnailData[randomPic]["link"]);
     
+    // Changes the meta (name and description) for the thumbnail
     var thumbnailCover = $('.hobby-thumb').eq(randThumbElement).children().eq(0);
     thumbnailCover.children('.name').text(thumbnailData[randomPic]["title"]);
     thumbnailCover.children('.thumb-desc').text(thumbnailData[randomPic]["desc"]);
@@ -112,7 +135,7 @@ $(window).scroll(function(){
 function coursesScroll(){
     var wScroll = $(window).scrollTop();
     var eduSectionPos = $('section.education').offset().top;
-    var triggerPoint = eduSectionPos - $(window).height()
+    var triggerPoint = eduSectionPos - $(window).height();
 
     if(triggerPoint < wScroll){
         $('.courses-1').css('margin-top', '-' + (wScroll - triggerPoint) +'px');
