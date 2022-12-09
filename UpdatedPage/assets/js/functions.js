@@ -54,28 +54,25 @@ function projectNav() {
     $('.proj-Btn').on('click', function(){
         var $this = $(this);
 
-        $this.addClass('selected')
-            .siblings().removeClass('selected');
+        $this.siblings().removeClass('optum-selected')
+            .removeClass('bayer-selected')
+            .removeClass('default-selected');
         
         
         // Set accent color as per company theme color
-        var btnText = $('.selected').text();
+        var btnText = $this.text();
         if(btnText.includes("Optum")){
-            $('.selected').css('color', '#E87722')
-                .siblings().css('color', '#8892b0'); // default color
+            $this.addClass('optum-selected');
             
             $('.highlighter').css('background', '#E87722');
         }
         else if(btnText.includes("Bayer")){
-            $('.selected').css('color', '#01BEFF')
-                .siblings().css('color', '#8892b0'); // default color
+            $this.addClass('bayer-selected');
             
             $('.highlighter').css('background', '#01BEFF');
         }
         else{
-            $('.selected').css('color', '#64ffda')
-                .siblings().css('color', '#8892b0'); // default color
-            
+            $this.addClass('default-selected');          
             $('.highlighter').css('background', '#64ffda');
         }
         
@@ -139,7 +136,7 @@ function coursesScroll(){
 
     if(triggerPoint < wScroll){
         $('.courses-1').css('margin-top', '-' + (wScroll - triggerPoint) +'px');
-        $('.courses-2').css('margin-top', '-' + (wScroll - triggerPoint) +'px');
+        $('.courses-2').css('margin-top', '-' +(wScroll - triggerPoint) +'px');
         // $('.courses-1').css('margin-top', 'calc(-350% + ' + (wScroll - triggerPoint) +'px');
         //$('.courses-2').css('margin-top', 'calc(-450% + ' + (wScroll - triggerPoint) +'px');
 

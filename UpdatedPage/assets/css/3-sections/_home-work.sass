@@ -1,9 +1,8 @@
 section.work
-    background: #0a192f
+    background: #293462
 
     .col-2
-        margin-top: 50px
-        margin-bottom: 50px
+        margin: 50px 0 0
 
     .grid
         display: flex
@@ -32,22 +31,28 @@ section.work
             width: 100%
             height: 42px
             padding: 0px 20px 2px
-            border-left: 2px solid #233554
+            border-left: 2px solid darken(#919191, 25%)
             background-color: transparent
             color: #8892b0
             font-size: 13px
             text-align: left
             white-space: nowrap
         
-        button.selected
+            &.proj-Btn:hover
+                color: #E87722
+                background-color: #112240
+        
+            &#Bayer-btn:hover
+                color: #01BEFF
+        
+        button.optum-selected
             color: #E87722
         
-        .proj-Btn:hover
-            color: #E87722
-            background-color: #112240
-        
-        #Bayer-btn:hover
+        button.bayer-selected
             color: #01BEFF
+        
+        button.default-selected
+            color: #64ffda
         
         .highlighter
             position: absolute
