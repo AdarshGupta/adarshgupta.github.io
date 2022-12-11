@@ -24,6 +24,7 @@ $(function(){
         }
 
     }, 5000);
+    
     designBGStuff();
 });
 
@@ -159,19 +160,15 @@ function menuThemeChange(){
     var menuColorScheme = '';
 
     if(wScroll >= workSectionPos - 50 && wScroll < eduSectionPos - 50){
-        console.log("In work section!");
         menuColorScheme = 'work-scheme';
     }
     else if(wScroll >= eduSectionPos - 50 && wScroll < skillsSectionPos - 50){
-        console.log("In Edu section!");
         menuColorScheme = 'edu-scheme';
     }
     else if(wScroll >= skillsSectionPos - 50 && wScroll < hobbiesSectionPos - 50){
-        console.log("In Skills section!");
         menuColorScheme = 'skills-scheme';
     }
     else if(wScroll >= hobbiesSectionPos - 50){
-        console.log("In Hobbies section!");
         menuColorScheme = 'hobbies-scheme';
     }
 
