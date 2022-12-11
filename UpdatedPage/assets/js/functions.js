@@ -113,7 +113,7 @@ function imageRotate(){
     var randThumbElement = Math.floor(Math.random() * $('.hobby-thumb').length);
 
     $('.hobby-thumb').eq(randThumbElement).css('background-image', 'url(' + thumbnailData[randomPic]["path"] + ')')
-                                        .attr('href', thumbnailData[randomPic]["link"]);
+                                        .attr('href', thumbnailData[randomPic]["path"]);
     
     // Changes the meta (name and description) for the thumbnail
     var thumbnailCover = $('.hobby-thumb').eq(randThumbElement).children().eq(0);
