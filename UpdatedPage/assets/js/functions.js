@@ -1,14 +1,16 @@
+var workSectionPos = $('section.work').offset().top;
+var eduSectionPos = $('section.education').offset().top;
+var skillsSectionPos = $('section.skills').offset().top;
+var hobbiesSectionPos = $('section.hobbies').offset().top;
+var footerSectionPos = $('footer.home-footer').offset().top;
+
 $(function(){
     smoothScroll(300);
     mobileNav();
     projectNav();
-
-    // Only invoke when hobbies section is in the view
+    
     setInterval(function(){
         var wScroll = $(window).scrollTop();
-        var hobbiesSectionPos = $('section.hobbies').offset().top;
-        var footerSectionPos = $('footer.home-footer').offset().top;
-
         if(wScroll > hobbiesSectionPos - $(window).height() && wScroll < footerSectionPos){
             hobbyTada();
         }
@@ -17,9 +19,6 @@ $(function(){
 
     setInterval(function(){
         var wScroll = $(window).scrollTop();
-        var hobbiesSectionPos = $('section.hobbies').offset().top;
-        var footerSectionPos = $('footer.home-footer').offset().top;
-
         if(wScroll > hobbiesSectionPos - $(window).height() && wScroll < footerSectionPos){
             imageRotate();
         }
@@ -123,22 +122,20 @@ function imageRotate(){
 
 }
 
-
+// Functions to be called when scrolled
 $(window).scroll(function(){
     coursesScroll();
     startHobbies();
+    menuThemeChange();
 });
 
 function coursesScroll(){
     var wScroll = $(window).scrollTop();
-    var eduSectionPos = $('section.education').offset().top;
     var triggerPoint = eduSectionPos - $(window).height();
 
     if(triggerPoint < wScroll){
         $('.courses-1').css('margin-top', '-' + (wScroll - triggerPoint) +'px');
         $('.courses-2').css('margin-top', '-' +(wScroll - triggerPoint) +'px');
-        // $('.courses-1').css('margin-top', 'calc(-350% + ' + (wScroll - triggerPoint) +'px');
-        //$('.courses-2').css('margin-top', 'calc(-450% + ' + (wScroll - triggerPoint) +'px');
 
         $('.video-strip').css('background-position','center -'+ wScroll +'px');
     }
@@ -155,4 +152,42 @@ function startHobbies(){
             }, 200 * i);
         });
     }
+}
+
+function menuThemeChange(){
+    var wScroll = $(window).scrollTop();
+    var menuColorScheme = '';
+
+    if(wScroll >= workSectionPos - 50 && wScroll < eduSectionPos - 50){
+        console.log("In work section!");
+        menuColorScheme = 'work-scheme';
+    }
+    else if(wScroll >= eduSectionPos - 50 && wScroll < skillsSectionPos - 50){
+        console.log("In Edu section!");
+        menuColorScheme = 'edu-scheme';
+    }
+    else if(wScroll >= skillsSectionPos - 50 && wScroll < hobbiesSectionPos - 50){
+        console.log("In Skills section!");
+        menuColorScheme = 'skills-scheme';
+    }
+    else if(wScroll >= hobbiesSectionPos - 50){
+        console.log("In Hobbies section!");
+        menuColorScheme = 'hobbies-scheme';
+    }
+
+    $('.site-nav a').each(function(i){
+        if($(this).hasClass('resume')){
+            // Removes all classes except resume class from the resume item
+            $(this).removeClass()
+                .addClass('resume');
+        }
+        else{
+            $(this).removeClass();
+        }
+        
+        // Except for about section (menuColor will be empty/default), color scheme will be set
+        if(menuColorScheme != ''){
+            $(this).addClass(menuColorScheme);
+        }
+    });
 }
