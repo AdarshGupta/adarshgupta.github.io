@@ -2,8 +2,15 @@ section.hobbies
     background: white
     padding: 0px
 
+    .hobby-container
+        @media (max-width: 768px)
+            display: block
+
     .hobby-head
         margin-left: 135px
+
+        @media (max-width: 768px)
+            margin-left: 0
     
     .col-1
         display: flex
@@ -84,16 +91,15 @@ section.hobbies
         .social-links
             width: 30%
 
-
             .icons
                 font-size: 36px
                 color: lightgrey
             
-            .fa-instagram:hover
-                color: #FE2C43
-            
-            .fa-github:hover
-                color: #24292F
+                .fa-instagram:hover
+                    color: #FE2C43
+                
+                .fa-github:hover
+                    color: #24292F
 
             
     
@@ -103,13 +109,13 @@ section.hobbies
         
         .col-1
             width: auto
-        
-        .icons
-            margin-bottom: 20px
-    
-    @media (max-width: 999px) and (min-width: 768px)
-        .hobby-thumb
-            width: 33.3%
+
+            .social-links
+                margin-top: 50px
+                margin-bottom: 80px
+
+                .icons
+                    font-size: 48px
 
 // From animate.css - https://github.com/animate-css/animate.css/blob/main/source/attention_seekers/tada.css
 @keyframes tada 
