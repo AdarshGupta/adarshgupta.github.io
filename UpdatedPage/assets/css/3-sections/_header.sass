@@ -31,25 +31,6 @@
             padding: 0
             margin: 0
 
-        .social-links
-            width: 100%
-            display: flex
-            flex-direction: row
-            justify-content: space-around
-
-            .icons
-                font-size: 24px
-                color: darkgrey
-            
-            .fa-github:hover
-                color: #24292F
-            
-            .fa-linkedin:hover
-                color: #0F78D4
-            
-            .fa-envelope-open:hover
-                color: #CA473A
-
         .mobile-nav-toggle
             display: none
             width: 50px
@@ -101,56 +82,56 @@
         li
             margin-bottom: 10px
         
-        a
-            color: rgba(0, 0, 0, 0.3)
-            text-transform: uppercase
-            letter-spacing: 3px
-            box-shadow: 0px 0px 0px 0px #99FFCD inset
-            transition: box-shadow 150ms ease-in-out, color 150ms ease-in-out
-
-            &.resume
-                color: rgba(0, 0, 0, 0.6)
-                box-shadow: 0px 1px 0px 0px #99FFCD
-
-            &:hover
-                box-shadow: 0px -17px 0px 0px #99FFCD inset
-                color: rgba(0, 0, 0, 0.87)
-            
-            &.work-scheme
-                box-shadow: 0px 0px 0px 0px #293462 inset
+            a
+                color: rgba(0, 0, 0, 0.3)
+                text-transform: uppercase
+                letter-spacing: 3px
+                box-shadow: 0px 0px 0px 0px #99FFCD inset
+                transition: box-shadow 150ms ease-in-out, color 150ms ease-in-out
 
                 &.resume
-                    box-shadow: 0px 1px 0px 0px #293462
+                    color: rgba(0, 0, 0, 0.6)
+                    box-shadow: 0px 1px 0px 0px #99FFCD
 
                 &:hover
-                    box-shadow: 0px -17px 0px 0px #95a0c0 inset
-            
-            &.edu-scheme
-                box-shadow: 0px 0px 0px 0px #FEDB39 inset
+                    box-shadow: 0px -17px 0px 0px #99FFCD inset
+                    color: rgba(0, 0, 0, 0.87)
+                
+                &.work-scheme
+                    box-shadow: 0px 0px 0px 0px #293462 inset
 
-                &.resume
-                    box-shadow: 0px 1px 0px 0px #FEDB39
+                    &.resume
+                        box-shadow: 0px 1px 0px 0px #293462
 
-                &:hover
-                    box-shadow: 0px -17px 0px 0px #FEDB39 inset
-            
-            &.skills-scheme
-                box-shadow: 0px 0px 0px 0px #3EC1D3 inset
+                    &:hover
+                        box-shadow: 0px -17px 0px 0px #95a0c0 inset
+                
+                &.edu-scheme
+                    box-shadow: 0px 0px 0px 0px #FEDB39 inset
 
-                &.resume
-                    box-shadow: 0px 1px 0px 0px #3EC1D3
+                    &.resume
+                        box-shadow: 0px 1px 0px 0px #FEDB39
 
-                &:hover
-                    box-shadow: 0px -17px 0px 0px #3EC1D3 inset
-            
-            &.hobbies-scheme
-                box-shadow: 0px 0px 0px 0px #FE2C43 inset
+                    &:hover
+                        box-shadow: 0px -17px 0px 0px #FEDB39 inset
+                
+                &.skills-scheme
+                    box-shadow: 0px 0px 0px 0px #3EC1D3 inset
 
-                &.resume
-                    box-shadow: 0px 1px 0px 0px #FE2C43
+                    &.resume
+                        box-shadow: 0px 1px 0px 0px #3EC1D3
 
-                &:hover
-                    box-shadow: 0px -17px 0px 0px #FE2C43 inset
+                    &:hover
+                        box-shadow: 0px -17px 0px 0px #3EC1D3 inset
+                
+                &.hobbies-scheme
+                    box-shadow: 0px 0px 0px 0px #FE2C43 inset
+
+                    &.resume
+                        box-shadow: 0px 1px 0px 0px #FE2C43
+
+                    &:hover
+                        box-shadow: 0px -17px 0px 0px #FE2C43 inset
     
     // Site nav specific
     .site-nav
@@ -176,6 +157,32 @@
         li
             text-align: center
             margin-bottom: 10px
+    
+    
+    .social-links
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+
+        @media (max-width: 768px)
+            width: 50%
+            margin: 20px auto
+            
+        
+        .icons
+            font-size: 24px
+            color: darkgrey
+        
+        .fa-github:hover
+            color: #24292F
+        
+        .fa-linkedin:hover
+            color: #0F78D4
+        
+        .fa-envelope-open:hover
+            color: #CA473A
+
 
 @media (max-width: 768px)
     .home-wrap 
@@ -197,8 +204,7 @@
                 flex-direction: row
                 align-items: center
 
-            .site-nav,
-            .social-links
+            .site-nav, .social-links
                 display: none
 
             .logo

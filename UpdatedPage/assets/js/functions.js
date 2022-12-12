@@ -168,7 +168,7 @@ function menuThemeChange(){
         menuColorScheme = 'hobbies-scheme';
     }
 
-    $('.site-nav a, .mobile-nav a').each(function(i){
+    $('.site-nav a, .mobile-nav ul a').each(function(i){
         if($(this).hasClass('resume')){
             // Removes all classes except resume class from the resume item
             $(this).removeClass()
