@@ -36,7 +36,7 @@ function smoothScroll (duration) {
 	    if( target.length ) {
 	        event.preventDefault();
 	        $('html, body').animate({
-	            scrollTop: target.offset().top
+	            scrollTop: target.offset().top - 90
 	        }, duration);
 	    }
 	});
@@ -45,6 +45,10 @@ function smoothScroll (duration) {
 function mobileNav() {
     $('.mobile-nav-toggle').on('click', function(){
       $('.mobile-nav-toggle, .mobile-nav').toggleClass('is-open');
+    });
+
+    $('.mobile-nav a').on('click', function(){
+        $('.mobile-nav-toggle, .mobile-nav').removeClass('is-open');
     });
 }
 
@@ -151,20 +155,20 @@ function menuThemeChange(){
     var wScroll = $(window).scrollTop();
     var menuColorScheme = '';
 
-    if(wScroll >= workSectionPos - 50 && wScroll < eduSectionPos - 50){
+    if(wScroll >= workSectionPos - 91 && wScroll < eduSectionPos - 91){
         menuColorScheme = 'work-scheme';
     }
-    else if(wScroll >= eduSectionPos - 50 && wScroll < skillsSectionPos - 50){
+    else if(wScroll >= eduSectionPos - 91 && wScroll < skillsSectionPos - 91){
         menuColorScheme = 'edu-scheme';
     }
-    else if(wScroll >= skillsSectionPos - 50 && wScroll < hobbiesSectionPos - 50){
+    else if(wScroll >= skillsSectionPos - 91 && wScroll < hobbiesSectionPos - 91){
         menuColorScheme = 'skills-scheme';
     }
-    else if(wScroll >= hobbiesSectionPos - 50){
+    else if(wScroll >= hobbiesSectionPos - 91){
         menuColorScheme = 'hobbies-scheme';
     }
 
-    $('.site-nav a').each(function(i){
+    $('.site-nav a, .mobile-nav a').each(function(i){
         if($(this).hasClass('resume')){
             // Removes all classes except resume class from the resume item
             $(this).removeClass()
