@@ -24,7 +24,7 @@ $(function(){
         }
 
     }, 5000);
-    
+
     designBGStuff();
 });
 
@@ -79,14 +79,8 @@ function projectNav() {
         // Find the corresponding job description panel for the respective button
         var target = '#' + $this.data('panel');
 
-        $(target).css({
-            "visibility": "visible",
-            "opacity": "1"
-        })
-        .siblings('.projPanel').css({
-            "visibility": "hidden",
-            "opacity": "0"
-        });
+        $(target).fadeIn("slow")
+                .siblings('.projPanel').hide();
 
 
         // Left border highlight on the button/tab selected
@@ -137,8 +131,6 @@ function coursesScroll(){
     if(triggerPoint < wScroll){
         $('.courses-1').css('margin-top', '-' + (wScroll - triggerPoint) +'px');
         $('.courses-2').css('margin-top', '-' +(wScroll - triggerPoint) +'px');
-
-        $('.video-strip').css('background-position','center -'+ wScroll +'px');
     }
 }
 

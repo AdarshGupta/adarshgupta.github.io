@@ -9,12 +9,11 @@ section.education
         display: flex
         flex-direction: column
         justify-content: center
+        width: auto
 
         @media (max-width: 768px)
             display: block
-            height: auto
-            width: auto
-            padding: 50px 20px
+            padding: 0
 
             &:last-child
                 padding: 0 20px 50px
@@ -22,15 +21,19 @@ section.education
     h2.section-heading
         color: #333
         width: 400px
+        margin-right: 0
     
     h2.section-heading:after
         background-color: #5D5D5D
 
     h3.home-lead
-        white-space: nowrap
         color: #333
         margin-bottom: 0
         font-weight: 500
+        text-align: left
+
+        .univ-name
+            text-align: left
 
     .fa-solid
         margin-right: 5px
@@ -42,7 +45,6 @@ section.education
     
     h4.degree
         color: black
-        white-space: nowrap
         margin-bottom: 0
     
     p.cgpa
@@ -51,31 +53,37 @@ section.education
     .courses-strip
         position: absolute
         top: 0
-        margin: -50px 0
-        margin-left: 200px      
-        width: 100px
+        margin: -50px 0    
+        width: auto
         height: 1000vh
         
         @media (max-width: 768px)
-            display: none
-    
-        .courses-1
+            margin-left: -40px
+        
+        .course-set
+            padding: 0
             margin: 0
-            width: auto
-            writing-mode: vertical-rl
-            text-orientation: sideways
-            color: black
-            transition: all 0.05s ease-in-out
+
+            @media (max-width: 768px)
+                &:last-child
+                    display: none
         
-        .courses-2
-            width: auto
-            writing-mode: vertical-rl
-            text-orientation: sideways
-            color: white
-            text-shadow: 0px 0px 20px #5D5D5D
-            transition: all 0.05s ease-in-out
-        
-        .course
-            margin: 0 0 15px 0
-            font-weight: 600
-            font-size: 18px
+            .courses-1
+                width: auto
+                writing-mode: vertical-rl
+                text-orientation: sideways
+                color: black
+                transition: all 0.05s ease-in-out
+            
+            .courses-2
+                width: auto
+                writing-mode: vertical-rl
+                text-orientation: sideways
+                color: white
+                text-shadow: 0px 0px 20px #5D5D5D
+                transition: all 0.05s ease-in-out
+            
+            .course
+                margin: 0 0 15px 0
+                font-weight: 600
+                font-size: 18px

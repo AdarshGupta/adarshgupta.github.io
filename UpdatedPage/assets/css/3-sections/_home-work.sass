@@ -1,17 +1,21 @@
 section.work
     background: #293462
+    padding-left: 50px
+    padding-right: 50px
+    height: auto
+    transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s
 
     .col-2
         margin: 50px 0 0
+        height: auto
 
     .grid
         display: flex
+        min-height: 560px
+        height: auto
 
         @media (max-width: 600px)
             display: block
-        
-        @media (min-width: 700px)
-            min-height: 560px
     
     .tabsPanel
         position: relative
@@ -19,6 +23,7 @@ section.work
         width: max-content
         padding: 0
         margin: 0
+        height: auto
 
         button
             cursor: pointer
@@ -71,6 +76,7 @@ section.work
         position: relative
         width: 100%
         margin-left: 20px
+        height: auto
 
         h3
             margin: 0 0 2px 0
@@ -133,30 +139,20 @@ section.work
                     color: #E87722
         
         .projPanel
-            position: absolute
-            top: 0
-            left: 0
-            transition: visibility 0s , opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s
-        
-        #LSDWPanel
-            visibility: visible
-            opacity: 1
+            width: 100%
+            height: auto
     
         #CMRPanel
-            visibility: hidden
-            opacity: 0
+            display: none
         
         #OPAPanel
-            visibility: hidden
-            opacity: 0
+            display: none
 
         #CMGAPanel
-            visibility: hidden
-            opacity: 0
+            display: none
         
         #BayerPanel
-            visibility: hidden
-            opacity: 0
+            display: none
 
             .company
                 color: #01BEFF
