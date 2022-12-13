@@ -6,16 +6,18 @@ section.skills
 
     .skill-section
         height: 100%
+        width: 100%
 
         @media (max-width: 768px)
             flex-wrap: wrap
+            padding-left: 0
     
     h2.section-heading
         color: #333
         width: 400px
         position: absolute
         top: 30px
-        left: 205px
+        left: 80px
 
         @media (max-width: 768px)
             left: 50px
@@ -35,21 +37,23 @@ section.skills
 
         @media (max-width: 768px)
             width: 50%
-
-        &:first-child
-            margin-left: 135px
-
-            @media (max-width: 768px)
-                margin-left: 0
+        
+        @media (max-width: 364px)
+            width: 100%
         
         .col-1
-            padding: 0 35px
+            padding: 0 5%
+            width: auto
 
-            @media (max-width: 768px)
-                padding: 0 5px
+            @media (max-width: 480px)
+                padding: 0
         
             .container
                 flex-wrap: wrap
+                margin-top: 50px
+
+                @media (max-width: 480px)
+                    margin-top: 0px
 
     .home-lead
         text-align: center
@@ -72,6 +76,9 @@ section.skills
 
         &.skill-section-2
             background-color: #F6F7D7
+
+            @media (max-width: 364px)
+                padding-top: 75px
         
         &.skill-section-3
             background-color: #FF9A00

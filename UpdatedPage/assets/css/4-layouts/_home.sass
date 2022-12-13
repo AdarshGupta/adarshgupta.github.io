@@ -3,15 +3,20 @@
     min-height: 100vh
     margin: 0
     padding: 0
+    padding-left: 135px
+    width: auto
 
     @media (max-width: 768px)
         display: block
+        padding-left: 0
 
 .home-sections
     flex: 1
+    width: 100%
 
     section
         padding: 50px 0
+        width: auto
 
         .section-heading
             display: flex
@@ -38,6 +43,9 @@
 
             @media (max-width: 480px)
                 width: 250px
+            
+            @media (max-width: 364px)
+                width: 150px
 
     // Flex classes
     .flex
@@ -67,23 +75,7 @@
     width: 50%
 
 .push-right
-    margin-left: 50%
-
-@media (max-width: 480px)
-    
-    .col-1
-        max-width: 100%
-        width: auto
-    
-    .col-2
-        max-width: 100%
-        width: auto
-    
-    .col-50
-        width: auto
-    
-    .push-right
-        margin-left: 0
+    margin-left: 450px
 
 @media (min-width: 481px) and (max-width: 768px)
     
@@ -103,11 +95,26 @@
     .push-right
         margin-left: 0
 
+@media (max-width: 480px)
+    
+    .col-1
+        max-width: 100%
+        width: auto
+    
+    .col-2
+        max-width: 100%
+        width: auto
+    
+    .col-50
+        width: auto
+    
+    .push-right
+        margin-left: 0
 
 // Typography
 
 .home-lead
-    font-size: 36px
+    font-size: clamp(16px, 3vw, 36px)
     line-height: 1.1
 
     &.outdented

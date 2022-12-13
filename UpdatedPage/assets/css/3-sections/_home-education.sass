@@ -3,6 +3,9 @@ section.education
     overflow: hidden
     padding-bottom: 80px
 
+    @media (max-width: 768px)
+        padding: 0 20px 80x
+
     .col-1
         position: relative
         height: 500px
@@ -14,6 +17,7 @@ section.education
         @media (max-width: 768px)
             display: block
             padding: 0
+            width: 100%
 
             &:last-child
                 padding: 0 20px 50px
@@ -47,11 +51,17 @@ section.education
         color: #3f3f42
         margin-top: 7px
         margin-left: 11px
+
+        @media (max-width: 480px)
+            margin-left: 0px
     
     h4.degree
         color: black
         margin-bottom: 0
 
+        @media (max-width: 768px)
+            margin-top: 90px
+        
         @media (max-width: 480px)
             margin-top: 70px
     
@@ -61,12 +71,13 @@ section.education
     .courses-strip
         position: absolute
         top: 0
+        right: -20px
         margin: -50px 0    
         width: auto
         height: 1000vh
         
         @media (max-width: 768px)
-            margin-left: -40px
+            right: 20px
         
         .course-set
             padding: 0
