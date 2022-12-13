@@ -25,6 +25,14 @@ section.work
         margin: 0
         height: auto
 
+        @media (max-width: 600px)
+            display: flex
+            overflow-x: auto
+            width: calc(100% + 100px)
+            padding-left: 50px
+            margin-left: -50px
+            margin-bottom: 30px
+
         button
             cursor: pointer
             border: 0
@@ -42,6 +50,17 @@ section.work
             font-size: 13px
             text-align: left
             white-space: nowrap
+
+            @media (max-width: 768px)
+                padding: 0px 15px 2px
+
+            @media (max-width: 600px)
+                min-width: 120px
+                padding: 0px 15px
+                border-left: 0
+                border-bottom: 2px solid darken(#919191, 25%)
+                text-align: center
+
         
             &.proj-Btn:hover
                 color: #E87722
@@ -70,6 +89,15 @@ section.work
             background:  #E87722
             transform: translateY(calc(0 * 42px))
             transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s
+
+            @media (max-width: 600px)
+                top: auto
+                bottom: 0px
+                width: 100%
+                max-width: 120px
+                height: 2px
+                margin-left: 50px
+                transform: translateX(calc(0 * 120px))
 
 
     .expPanel

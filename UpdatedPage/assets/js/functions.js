@@ -87,8 +87,14 @@ function projectNav() {
                 .siblings('.projPanel').hide();
 
 
-        // Left border highlight on the button/tab selected
-        $('.highlighter').css('transform', 'translateY(calc(' + $this.index() + ' * 42px))');
+        if(window.matchMedia('(max-width: 600px)').matches) {
+            // Left border highlight on the button/tab selected
+            $('.highlighter').css('transform', 'translateX(calc(' + $this.index() + ' * 120px))');
+        }
+        else{
+            // Left border highlight on the button/tab selected
+            $('.highlighter').css('transform', 'translateY(calc(' + $this.index() + ' * 42px))');
+        }
     });
 }
 
