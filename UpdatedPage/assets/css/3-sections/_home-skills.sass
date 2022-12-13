@@ -7,7 +7,7 @@ section.skills
     .skill-section
         height: 100%
 
-        @media (min-width: 481px) and (max-width: 768px)
+        @media (max-width: 768px)
             flex-wrap: wrap
     
     h2.section-heading
@@ -19,6 +19,9 @@ section.skills
 
         @media (max-width: 768px)
             left: 50px
+        
+        @media (max-width: 768px)
+            left: 30px
 
 
     h2.section-heading:after
@@ -30,7 +33,7 @@ section.skills
         box-sizing: border-box
         background: red
 
-        @media (min-width: 481px) and (max-width: 768px)
+        @media (max-width: 768px)
             width: 50%
 
         &:first-child
@@ -42,7 +45,7 @@ section.skills
         .col-1
             padding: 0 35px
 
-            @media (min-width: 481px) and (max-width: 768px)
+            @media (max-width: 768px)
                 padding: 0 5px
         
             .container
@@ -52,6 +55,9 @@ section.skills
         text-align: center
         font-size: clamp(20px, 4vw, 30px)
         height: 66px
+
+        @media (max-width: 480px)
+            margin-bottom: 0
     
     .skill-section-1, .skill-section-2, .skill-section-3, .skill-section-4
         background:
@@ -70,14 +76,20 @@ section.skills
         &.skill-section-3
             background-color: #FF9A00
 
-            @media (min-width: 481px) and (max-width: 768px)
+            @media (max-width: 768px)
                 padding-top: 100px
+            
+            @media (max-width: 480px)
+                padding-top: 75px
         
         &.skill-section-4
             background-color: #FF165D
 
-            @media (min-width: 481px) and (max-width: 768px)
+            @media (max-width: 768px)
                 padding-top: 100px
+            
+            @media (max-width: 480px)
+                padding-top: 75px
 
     .design-img-link
         width: 35%
