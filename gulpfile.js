@@ -111,7 +111,9 @@ function copyImages(){
  */
 function deploy() {
     return gulp.src('./_site/**/*')
-            .pipe(ghPages()); //Default: branch: "gh-pages"
+            .pipe(ghPages({
+                branch: "gh-pages"
+            })); //Default: branch: "gh-pages"
 };
 
 /**
