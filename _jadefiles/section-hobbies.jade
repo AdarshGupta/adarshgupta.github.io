@@ -1,5 +1,6 @@
-mixin thumbnail-img(img, title, desc)
-    a(href="#{img}" style="background-image: url(#{img})" target="_blank").hobby-thumb
+mixin thumbnail-img(imagePath, title, desc)
+    a(href="#{imagePath}" target="_blank").hobby-thumb
+        img(src="#{imagePath}" alt="#{title}")
         .hobby-meta
             .name #{title}
             .thumb-desc #{desc}
@@ -17,7 +18,8 @@ section.hobbies#hobbies
                 
                 a(href="https://www.youtube.com/" style="background-image: url(assets/img/youtube-bg.gif)" target="_blank" rel="external nofollow").youtube-thumb
                     i.fa-brands.fa-youtube
-                a(href="https://redshift-calculator.netlify.app/" style="background-image: url(assets/img/RedshiftCalc-sideproj.png)" target="_blank" rel="external nofollow").side-proj
+                a(href="https://redshift-calculator.netlify.app/" target="_blank" rel="external nofollow").side-proj
+                    img(src="assets/img/RedshiftCalc-sideproj.png" alt="Redshift Calculator - side project")
                     .hobby-meta
                         .name Redshift Calculator
                         .thumb-desc Side Project
