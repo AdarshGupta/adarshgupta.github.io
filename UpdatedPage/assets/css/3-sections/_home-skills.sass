@@ -57,8 +57,11 @@ section.skills
 
     .home-lead
         text-align: center
-        font-size: clamp(20px, 4vw, 30px)
+        font-size: clamp(20px, 3vw, 30px)
         height: 66px
+
+        @media (min-width: 481px) and (max-width: 768px)
+            font-size: clamp(20px, 4vw, 30px)
 
         @media (max-width: 480px)
             margin-bottom: 0
@@ -115,3 +118,7 @@ section.skills
         &:hover
             transform: scale(1.1)
             background-color: rgba(white, 0.3)
+        
+        span
+            word-wrap: break-word
+            white-space: normal

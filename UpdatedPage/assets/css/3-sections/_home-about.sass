@@ -11,7 +11,7 @@ section.about
     h2
         color: #3f3f42
         font:
-            size: clamp(49px, 8vw, 80px)
+            size: clamp(49px, 6vw, 80px)
             weight: 600
         line-height: 1
         margin-left: -108px
@@ -25,6 +25,10 @@ section.about
     .col-1
         width: 500px
         margin-bottom: 180px
+
+@media (max-width: 900px)
+    section.about
+        background-size: 50%
 
 @media (max-width: 768px)
     section.about
