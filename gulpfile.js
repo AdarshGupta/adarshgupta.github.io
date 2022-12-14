@@ -9,6 +9,7 @@ const jade = require('gulp-jade');
 const concat = require('gulp-concat');
 const minify = require('gulp-minify');
 const cleanCss = require('gulp-clean-css');
+const ghPages = require('gulp-gh-pages');
 
 var paths = {
     jekyll: {
@@ -106,6 +107,16 @@ function copyImages(){
 }
 
 /**
+ * Deploy site to GitHub Pages
+ */
+function deploy() {
+    return gulp.src('./_site/**/*')
+            .pipe(ghPages({
+                branch: "master"
+            }));
+};
+
+/**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
  */
@@ -126,3 +137,4 @@ exports.watch = watch;
 exports.jadeToHTML = jadeToHTML;
 exports.jekyllRebuild = gulp.series(jekyllBuild, jekyllRebuild);
 exports.default = gulp.series(styles, mergeJS, copyImages, jekyllBuild, gulp.parallel(serve, watch));
+exports.deploy = gulp.series(styles, mergeJS, copyImages, jekyllBuild, deploy);
