@@ -1,0 +1,21 @@
+mixin face(face, words, name)
+    li.face(style="background-image: url(#{face});")
+        .bubble
+            p #{words}
+            cite - #{name}
+
+section.mentoring#mentoring
+    .flex.flex--center
+        .col-1
+            ul.faces
+                +face("https://picsum.photos/80/80", "He is pretty good", "ABC")
+                +face("https://picsum.photos/80/80", "He is mind-blowing good", "DEF")
+                +face("https://picsum.photos/80/80", "He is fantabulous", "XYZ")
+                +face("https://picsum.photos/80/80", "He is fantastic good", "GHI")
+                +face("https://picsum.photos/80/80", "He is amazing", "JKL")
+                +face("https://picsum.photos/80/80", "He is crazy good", "MNOP")
+                li.back-btn.face
+
+        .col-1
+            p.home-lead.outdented ...Mentoring people like you...
+            a(href="").home-cta Schedule a call

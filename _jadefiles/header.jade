@@ -1,0 +1,34 @@
+//- Reusable nav content and one place to change
+mixin nav-content()
+    ul
+        li: a(href="#about") About
+        li: a(href="#work") Work
+        li: a(href="#education") Academics
+        li: a(href="#skills") Skills
+        li: a(href="#hobbies") Hobbies
+        li: a(href="#contact") Contact
+        li: a(href="/assets/docs/Adarsh_Gupta_Resume.pdf" target="_blank").resume Resume
+
+mixin social-link-content()
+    .social-links.flex.flex--space-around
+        a(href="https://github.com/AdarshGupta" target="_blank" title="GitHub" rel="external").icons
+            i.fa-brands.fa-github
+        a(href="https://www.linkedin.com/in/adarsh035" target="_blank" title="LinkedIn" rel="external").icons
+            i.fa-brands.fa-linkedin
+        a(href="mailto:adarsh035@gmail.com" title="Email me").icons
+            i.fa-regular.fa-envelope-open
+
+.mobile-nav
+    +nav-content()
+    +social-link-content()
+
+header
+    .header-position
+        h1(title="Adarsh Gupta").logo Adarsh Gupta
+
+        nav.site-nav
+            +nav-content()
+        
+        +social-link-content()
+
+        .mobile-nav-toggle: span

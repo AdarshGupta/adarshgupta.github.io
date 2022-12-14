@@ -1,0 +1,36 @@
+mixin thumbnail-img(img, title, desc)
+    a(href="#{img}" style="background-image: url(#{img})" target="_blank").hobby-thumb
+        .hobby-meta
+            .name #{title}
+            .thumb-desc #{desc}
+
+section.hobbies#hobbies
+    .hobby-container.flex.flex--center
+
+        .col-50
+            .hobbies-wrap.flex
+                +thumbnail-img('assets/img/thumbnails/Alleppey_backwaters-Kerala.jpg', 'Alappuzha Backwaters, Kerala, India', 'Dec 2019')
+                +thumbnail-img('assets/img/thumbnails/Cat_Ba-North_Vietnam6.jpg', 'Cat Ba, Vietnam', 'Dec 2019')
+                +thumbnail-img('assets/img/thumbnails/Chennai-Tamil_Nadu.jpg', 'Chennai, Tamil Nadu, India', 'Dec 2018')
+                +thumbnail-img('assets/img/thumbnails/Ha_Long_Bay-North_Vietnam3.jpg', 'Ha Long Bay, Vietnam', 'Dec 2019')
+                +thumbnail-img('assets/img/thumbnails/Hanoi-North_Vietnam.jpg', 'Hanoi, Vietnam', 'Dec 2019')
+                
+                a(href="https://www.youtube.com/" style="background-image: url(assets/img/youtube-bg.gif)" target="_blank" rel="external nofollow").youtube-thumb
+                    i.fa-brands.fa-youtube
+                a(href="https://redshift-calculator.netlify.app/" style="background-image: url(assets/img/RedshiftCalculator-SideProj.png)" target="_blank" rel="external nofollow").side-proj
+                    .hobby-meta
+                        .name Redshift Calculator
+                        .thumb-desc Side Project
+                
+                +thumbnail-img('assets/img/thumbnails/Ho_Chi_Minh_City-South_Vietnam2.jpg', 'Ho Chi Minh, Vietnam', 'Dec 2019')
+                +thumbnail-img('assets/img/thumbnails/Monkey_Island-CatBa2.jpg', 'Monkey Island, Cat Ba, Vietnam', 'Dec 2019')
+
+        .col-50.flex.flex--center.order-first.hobby-head
+            .col-1
+                .desc-wrap
+                    p.home-lead I like to spend my leisure time exploring Youtube, daydreaming about travelling, landscape photography and learning random stuff.
+                .social-links.flex.flex--center
+                    a(href="https://github.com/AdarshGupta" target="_blank" title="GitHub" rel="external").icons
+                        i.fa-brands.fa-github
+                    a(href="https://www.instagram.com/adarsh035/" target="_blank" title="Instagram" rel="external").icons
+                        i.fa-brands.fa-instagram

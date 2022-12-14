@@ -1,0 +1,147 @@
+section.hobbies
+    background: white
+    padding: 0px
+
+    .hobby-container
+        @media (max-width: 768px)
+            display: block
+            padding-left: 0
+
+    .hobby-head
+        margin-left: 0
+        flex-direction: column
+        align-items: center
+    
+    .hobbies-wrap
+        flex-wrap: wrap
+    
+    .hobby-thumb, .youtube-thumb, .side-proj
+        display: block
+        background:
+            size: cover
+            position: center
+        width: 33.333333%
+        position: relative
+        overflow: hidden
+        opacity: 0
+        transition: all 0.3s ease-in-out
+
+        &.is-visible
+            opacity: 1
+
+        &.is-emph
+            animation-name: tada
+            animation-duration: 1s
+            animation-fill-mode: both
+            z-index: 1
+
+        &:after
+            content: ''
+            display: block
+            padding-top: 100%
+    
+    .youtube-thumb
+        display: flex
+        flex-direction: column
+        justify-content: center
+        text-align: center
+    
+    .fa-youtube
+        color: black
+        font-size: 80px
+        position: absolute
+        width: 100%
+    
+    .hobby-meta
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        background: fade-out(#3d96cb, 0.3)
+        color: white
+        padding: 10px
+        transform: translate(0%, 100%) scale(0.5)
+        transition: all 0.2s ease-in-out
+        opacity: 0
+
+        .name
+            font-size: 18px
+            line-height: 1.2
+        
+        .thumb-desc
+            font-style: italic
+    
+    .hobby-thumb:hover .hobby-meta, .side-proj:hover .hobby-meta
+        opacity: 1
+        transform: translate(0%, 0%) scale(1)
+    
+    .col-1
+        width: auto
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+        .desc-wrap
+            text-align: center
+            padding: 0 10%
+
+        .social-links
+            width: auto
+            margin: auto
+            justify-content: center
+
+            .icons
+                font-size: 36px
+                color: lightgrey
+                padding: 0 20px
+            
+                .fa-instagram:hover
+                    color: #FE2C43
+                
+                .fa-github:hover
+                    color: #24292F
+
+            
+    
+    @media (max-width: 768px) 
+        
+        .col-1
+
+            .desc-wrap
+                margin-top: 100px
+
+            .social-links
+                margin-top: 50px
+                margin-bottom: 80px
+
+                .icons
+                    font-size: 48px
+    
+    @media (max-width: 480px)
+        .col-1
+            .social-links
+                margin-bottom: 50px
+
+// From animate.css - https://github.com/animate-css/animate.css/blob/main/source/attention_seekers/tada.css
+@keyframes tada 
+  from 
+    transform: scale3d(1, 1, 1)
+  
+  10%,
+  20% 
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg)
+  
+  30%,
+  50%,
+  70%,
+  90% 
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+  
+  40%,
+  60%,
+  80% 
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+  
+  to 
+    transform: scale3d(1, 1, 1)

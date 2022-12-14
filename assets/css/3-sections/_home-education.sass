@@ -1,0 +1,117 @@
+section.education
+    background: #FEDB39
+    overflow: hidden
+    padding-bottom: 80px
+
+    @media (max-width: 768px)
+        padding: 0 20px 80x
+
+    .col-1
+        position: relative
+        height: 500px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        width: auto
+
+        @media (max-width: 768px)
+            display: block
+            padding: 0
+            width: 100%
+
+            &:last-child
+                padding: 0 20px 50px
+        
+        @media (max-width: 480px)
+
+            &:first-child
+                display: none
+
+    h2.section-heading
+        color: #333
+        width: auto
+        margin-right: 0
+    
+    h2.section-heading:after
+        background-color: #5D5D5D
+        
+        @media (max-width: 480px)
+            width: 215px
+
+    h3.home-lead
+        color: #333
+        margin-bottom: 0
+        font-weight: 500
+        text-align: left
+
+        .univ-name
+            text-align: left
+
+    .fa-solid
+        margin-right: 5px
+    
+    p.location
+        color: #3f3f42
+        margin-top: 7px
+        margin-left: 11px
+
+        @media (max-width: 480px)
+            margin-left: 0px
+    
+    h4.degree
+        color: black
+        margin-bottom: 0
+
+        @media (max-width: 768px)
+            margin-top: 90px
+        
+        @media (max-width: 480px)
+            margin-top: 70px
+    
+    p.cgpa
+        color: black
+    
+    .courses-strip
+        position: absolute
+        top: 0
+        right: -20px
+        margin: -50px 0    
+        width: auto
+        height: 1000vh
+        
+        @media (max-width: 768px)
+            right: 20px
+        
+        .course-set
+            padding: 0
+            margin: 0
+
+            @media (max-width: 768px)
+                &:last-child
+                    display: none
+        
+            .courses-1
+                width: auto
+                writing-mode: vertical-rl
+                text-orientation: sideways
+                color: black
+                transition: all 0.05s ease-in-out
+
+                @media (max-width: 610px)
+                    display: none
+            
+            .courses-2
+                width: auto
+                writing-mode: vertical-rl
+                text-orientation: sideways
+                color: white
+                text-shadow: 0px 0px 20px #5D5D5D
+                transition: all 0.05s ease-in-out
+
+                @media (max-width: 635px)
+                    display: none
+            
+            .course
+                margin: 0 0 15px 0
+                font-weight: 600
+                font-size: 18px
