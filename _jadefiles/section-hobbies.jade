@@ -1,6 +1,6 @@
-mixin thumbnail-img(imagePath, title, desc)
-    a(href="#{imagePath}" target="_blank").hobby-thumb
-        img(src="#{imagePath}" alt="#{title}")
+mixin thumbnail-img(fileName, title, desc)
+    a(href="assets/img/thumbnails/#{fileName}" target="_blank").hobby-thumb
+        img(src="assets/img/thumbnails-small/#{fileName}" alt="#{title}")
         .hobby-meta
             .name #{title}
             .thumb-desc #{desc}
@@ -10,11 +10,11 @@ section.hobbies#hobbies
 
         .col-50
             .hobbies-wrap.flex
-                +thumbnail-img('assets/img/thumbnails/Alleppey_backwaters-Kerala.jpg', 'Alappuzha Backwaters, Kerala, India', 'Dec 2019')
-                +thumbnail-img('assets/img/thumbnails/Cat_Ba-North_Vietnam6.jpg', 'Cat Ba, Vietnam', 'Dec 2019')
-                +thumbnail-img('assets/img/thumbnails/Chennai-Tamil_Nadu.jpg', 'Chennai, Tamil Nadu, India', 'Dec 2018')
-                +thumbnail-img('assets/img/thumbnails/Ha_Long_Bay-North_Vietnam3.jpg', 'Ha Long Bay, Vietnam', 'Dec 2019')
-                +thumbnail-img('assets/img/thumbnails/Hanoi-North_Vietnam.jpg', 'Hanoi, Vietnam', 'Dec 2019')
+                +thumbnail-img('Alleppey_backwaters-Kerala.webp', 'Alappuzha Backwaters, Kerala, India', 'Dec 2019')
+                +thumbnail-img('Cat_Ba-North_Vietnam6.webp', 'Cat Ba, Vietnam', 'Dec 2019')
+                +thumbnail-img('Chennai-Tamil_Nadu.webp', 'Chennai, Tamil Nadu, India', 'Dec 2018')
+                +thumbnail-img('Ha_Long_Bay-North_Vietnam3.webp', 'Ha Long Bay, Vietnam', 'Dec 2019')
+                +thumbnail-img('Hanoi-North_Vietnam.webp', 'Hanoi, Vietnam', 'Dec 2019')
                 
                 a(href="https://www.youtube.com/" style="background-image: url(assets/img/youtube-bg.gif)" target="_blank" rel="external nofollow").youtube-thumb
                     i.fa-brands.fa-youtube
@@ -24,8 +24,8 @@ section.hobbies#hobbies
                         .name Redshift Calculator
                         .thumb-desc Side Project
                 
-                +thumbnail-img('assets/img/thumbnails/Ho_Chi_Minh_City-South_Vietnam2.jpg', 'Ho Chi Minh, Vietnam', 'Dec 2019')
-                +thumbnail-img('assets/img/thumbnails/Monkey_Island-CatBa2.jpg', 'Monkey Island, Cat Ba, Vietnam', 'Dec 2019')
+                +thumbnail-img('Ho_Chi_Minh_City-South_Vietnam2.webp', 'Ho Chi Minh, Vietnam', 'Dec 2019')
+                +thumbnail-img('Monkey_Island-CatBa2.webp', 'Monkey Island, Cat Ba, Vietnam', 'Dec 2019')
 
         .col-50.flex.flex--center.order-first.hobby-head
             .col-1

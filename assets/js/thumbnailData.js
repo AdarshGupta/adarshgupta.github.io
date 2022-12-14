@@ -2,266 +2,266 @@ let thumbnailData = [
     {
         "title": "Alappuzha, Kerala, India",
         "desc": "May 2018",
-        "path": "assets/img/thumbnails/Alappuzha-Kerala.jpg"
+        "fileName": "Alappuzha-Kerala.webp"
     },
     {
         "title": "Alappuzha Backwaters, Kerala, India",
         "desc": "May 2018",
-        "path": "assets/img/thumbnails/Alleppey_backwaters-Kerala.jpg"
+        "fileName": "Alleppey_backwaters-Kerala.webp"
     },
     {
         "title": "Besant Nagar Beach, Chennai, India",
         "desc": "Dec 2018",
-        "path": "assets/img/thumbnails/Besant_Nagar_Beach-Chennai.jpg"
+        "fileName": "Besant_Nagar_Beach-Chennai.webp"
     },
     {
         "title": "Cat Ba, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Cat_Ba-North_Vietnam.jpg"
+        "fileName": "Cat_Ba-North_Vietnam.webp"
     },
     {
         "title": "Cat Ba, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Cat_Ba-North_Vietnam4.jpg"
+        "fileName": "Cat_Ba-North_Vietnam4.webp"
     },
     {
         "title": "Cat Ba, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Cat_Ba-North_Vietnam5.jpg"
+        "fileName": "Cat_Ba-North_Vietnam5.webp"
     },
     {
         "title": "Cat Ba, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Cat_Ba-North_Vietnam6.jpg"
+        "fileName": "Cat_Ba-North_Vietnam6.webp"
     },
     {
         "title": "Cat Ba Island, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/CatBaIsland-North_Vietnam.jpg"
+        "fileName": "CatBaIsland-North_Vietnam.webp"
     },
     {
         "title": "Chennai, Tamil Nadu, India",
         "desc": "Dec 2018",
-        "path": "assets/img/thumbnails/Chennai-Tamil_Nadu.jpg"
+        "fileName": "Chennai-Tamil_Nadu.webp"
     },
     {
         "title": "Chennai, Tamil Nadu, India",
         "desc": "Dec 2018",
-        "path": "assets/img/thumbnails/Chennai-Tamil_Nadu2.jpg"
+        "fileName": "Chennai-Tamil_Nadu2.webp"
     },
     {
         "title": "Chennai, Tamil Nadu, India",
         "desc": "Dec 2018",
-        "path": "assets/img/thumbnails/Chennai-Tamil_Nadu3.jpg"
+        "fileName": "Chennai-Tamil_Nadu3.webp"
     },
     {
         "title": "Chennai, Tamil Nadu, India",
         "desc": "Dec 2018",
-        "path": "assets/img/thumbnails/Chennai-Tamil_Nadu4.jpg"
+        "fileName": "Chennai-Tamil_Nadu4.webp"
     },
     {
         "title": "Chennai, Tamil Nadu, India",
         "desc": "Dec 2018",
-        "path": "assets/img/thumbnails/Chennai-Tamil_Nadu5.jpg"
+        "fileName": "Chennai-Tamil_Nadu5.webp"
     },
     {
         "title": "Da Nang, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Da Nang-Central_Vietnam.jpg"
+        "fileName": "Da Nang-Central_Vietnam.webp"
     },
     {
         "title": "Ha Long Bay, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Ha_Long_Bay-North_Vietnam.jpg"
+        "fileName": "Ha_Long_Bay-North_Vietnam.webp"
     },
     {
         "title": "Ha Long Bay, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Ha_Long_Bay-North_Vietnam2.jpg"
+        "fileName": "Ha_Long_Bay-North_Vietnam2.webp"
     },
     {
         "title": "Ha Long Bay, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Ha_Long_Bay-North_Vietnam3.jpg"
+        "fileName": "Ha_Long_Bay-North_Vietnam3.webp"
     },
     {
         "title": "Hanoi, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Hanoi-North_Vietnam.jpg"
+        "fileName": "Hanoi-North_Vietnam.webp"
     },
     {
         "title": "Hanoi, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Hanoi-North_Vietnam2.jpg"
+        "fileName": "Hanoi-North_Vietnam2.webp"
     },
     {
         "title": "Hanoi, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Hanoi-North_Vietnam3.jpg"
+        "fileName": "Hanoi-North_Vietnam3.webp"
     },
     {
         "title": "Ho Chi Minh's Mausoleum, Hanoi, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Ho Chi Minh's Mausoleum - Hanoi.jpeg"
+        "fileName": "Ho Chi Minh's Mausoleum - Hanoi.webp"
     },
     {
         "title": "Ho Chi Minh, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Ho_Chi_Minh_City-South_Vietnam.jpg"
+        "fileName": "Ho_Chi_Minh_City-South_Vietnam.webp"
     },
     {
         "title": "Ho Chi Minh, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Ho_Chi_Minh_City-South_Vietnam2.jpg"
+        "fileName": "Ho_Chi_Minh_City-South_Vietnam2.webp"
     },
     {
         "title": "Hue, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Hue-Central_Vietnam.jpg"
+        "fileName": "Hue-Central_Vietnam.webp"
     },
     {
         "title": "Hue, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Hue-Central_Vietnam2.jpg"
+        "fileName": "Hue-Central_Vietnam2.webp"
     },
     {
         "title": "Hue, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Hue-Central_Vietnam3.jpg"
+        "fileName": "Hue-Central_Vietnam3.webp"
     },
     {
         "title": "Kanniyakumari, Tamil_Nadu, India",
         "desc": "May 2018",
-        "path": "assets/img/thumbnails/Kanniyakumari-Tamil_Nadu.jpg"
+        "fileName": "Kanniyakumari-Tamil_Nadu.webp"
     },
     {
         "title": "Kanniyakumari, Tamil_Nadu, India",
         "desc": "May 2018",
-        "path": "assets/img/thumbnails/Kanniyakumari-Tamil_Nadu2.jpg"
+        "fileName": "Kanniyakumari-Tamil_Nadu2.webp"
     },
     {
         "title": "Monkey Island, Cat Ba, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Monkey_Island-CatBa.jpg"
+        "fileName": "Monkey_Island-CatBa.webp"
     },
     {
         "title": "Monkey Island, Cat Ba, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Monkey_Island-CatBa2.jpg"
+        "fileName": "Monkey_Island-CatBa2.webp"
     },
     {
         "title": "Monkey Island, Cat Ba, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Monkey_Island-CatBa3.jpg"
+        "fileName": "Monkey_Island-CatBa3.webp"
     },
     {
         "title": "Monkey Island, Cat Ba, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Monkey_Island-CatBa4.jpg"
+        "fileName": "Monkey_Island-CatBa4.webp"
     },
     {
         "title": "Munnar, Kerala, India",
         "desc": "May 2018",
-        "path": "assets/img/thumbnails/Munnar-Kerala.jpg"
+        "fileName": "Munnar-Kerala.webp"
     },
     {
         "title": "Panchgani, Maharashtra",
         "desc": "July 2019",
-        "path": "assets/img/thumbnails/Panchgani-MH.jpg"
+        "fileName": "Panchgani-MH.webp"
     },
     {
         "title": "Phong Nha-Ke Bang National Park, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Phong Nha-Ke Bang National Park - Central Vietnam.jpeg"
+        "fileName": "Phong Nha-Ke Bang National Park - Central Vietnam.webp"
     },
     {
         "title": "Phong Nha-Ke Bang National Park, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Phong Nha-Ke Bang National Park - Central Vietnam2.jpeg"
+        "fileName": "Phong Nha-Ke Bang National Park - Central Vietnam2.webp"
     },
     {
         "title": "Pichavaram Mangrove Forest, Tamil Nadu, India",
         "desc": "July 2022",
-        "path": "assets/img/thumbnails/Pichavaram_Mangrove_Forest-Tamil_Nadu.jpg"
+        "fileName": "Pichavaram_Mangrove_Forest-Tamil_Nadu.webp"
     },
     {
         "title": "Puducherry, India",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Puducherry.jpg"
+        "fileName": "Puducherry.webp"
     },
     {
         "title": "Rucmon Cave, Phong Nha-Ke Bang National Park, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Rucmon_Cave-Phong Nha-Ke Bang National Park - Central Vietnam.jpg"
+        "fileName": "Rucmon_Cave-Phong Nha-Ke Bang National Park - Central Vietnam.webp"
     },
     {
         "title": "Sanjay Gandhi National Park, Maharashtra, India",
         "desc": "Oct 2020",
-        "path": "assets/img/thumbnails/Sanjay_Gandhi_National_Park-Thane.jpg"
+        "fileName": "Sanjay_Gandhi_National_Park-Thane.webp"
     },
     {
         "title": "Shore Temple, Mahaballipuram",
         "desc": "July 2022",
-        "path": "assets/img/thumbnails/Shore_Temple-Mahaballipuram.jpg"
+        "fileName": "Shore_Temple-Mahaballipuram.webp"
     },
     {
         "title": "Shore Temple, Mahaballipuram",
         "desc": "July 2022",
-        "path": "assets/img/thumbnails/Shore_Temple-Mahaballipuram2.jpg"
+        "fileName": "Shore_Temple-Mahaballipuram2.webp"
     },
     {
         "title": "Cat Ba, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Vietnam_Catba.jpg"
+        "fileName": "Vietnam_Catba.webp"
     },
     {
         "title": "Ha Long Bay, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Vietnam_ha_long_bay_2.jpg"
+        "fileName": "Vietnam_ha_long_bay_2.webp"
     },
     {
         "title": "Ha Long Bay, Vietnam",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/vietnam_ha_long_bay.jpg"
+        "fileName": "vietnam_ha_long_bay.webp"
     },
     {
         "title": "Yelagiri Hills, Tamil Nadu, India",
         "desc": "Dec 2019",
-        "path": "assets/img/thumbnails/Yelagiri_hills-TN.jpg"
+        "fileName": "Yelagiri_hills-TN.webp"
     },
     {
         "title": "Kasauli, Himachal Pradesh, India",
         "desc": "Nov 2021",
-        "path": "assets/img/thumbnails/Kasauli-HP.jpg"
+        "fileName": "Kasauli-HP.webp"
     },
     {
         "title": "Kasauli, Himachal Pradesh, India",
         "desc": "Nov 2021",
-        "path": "assets/img/thumbnails/Kasauli-HP2.jpg"
+        "fileName": "Kasauli-HP2.webp"
     },
     {
         "title": "Kasol, Himachal Pradesh, India",
         "desc": "Nov 2021",
-        "path": "assets/img/thumbnails/kasol-hp.jpg"
+        "fileName": "kasol-hp.webp"
     },
     {
         "title": "Khajjiar, Himachal Pradesh, India",
         "desc": "Nov 2021",
-        "path": "assets/img/thumbnails/Khajjiar-HP.jpg"
+        "fileName": "Khajjiar-HP.webp"
     },
     {
         "title": "Manikaran, Himachal Pradesh, India",
         "desc": "Nov 2021",
-        "path": "assets/img/thumbnails/Manikaran-HP.jpg"
+        "fileName": "Manikaran-HP.webp"
     },
     {
         "title": "Shimla, Himachal Pradesh, India",
         "desc": "Nov 2021",
-        "path": "assets/img/thumbnails/Shimla-HP.jpg"
+        "fileName": "Shimla-HP.webp"
     },
     {
         "title": "Chehli, Himachal Pradesh, India",
         "desc": "Nov 2021",
-        "path": "assets/img/thumbnails/Chehli-HP.jpg"
+        "fileName": "Chehli-HP.webp"
     }
 ];
