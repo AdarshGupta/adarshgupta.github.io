@@ -1,6 +1,7 @@
 _site
 .idea
 node_modules
+.publish
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,jekyll,sass
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,jekyll,sass
