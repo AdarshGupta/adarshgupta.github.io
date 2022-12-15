@@ -104,6 +104,14 @@ function designBGStuff(){
     }, function(){
         $(this).parent().parent().parent().css('background-color', $(this).parent().parent().parent().data('orig-color'));
     });
+
+    $('.design-img-link').on("touchstart", function() {
+        $(this).parent().parent().parent().css('background-color', $(this).data('color'));
+    });
+
+    $('.design-img-link').on("touchend", function() {
+        $(this).parent().parent().parent().css('background-color', $(this).parent().parent().parent().data('orig-color'));
+    });
 }
 
 function hobbyTada(){
