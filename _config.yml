@@ -2,3 +2,6 @@ name: Adarsh Gupta
 markdown: kramdown
 keep_files: ["assets/css", "assets/js", "assets/img"] #Note that normally Jekyll destroys the destination folder before building, but now it leaves _site/assets/js and _site/assets/css untouched
 exclude: ["node_modules", "gulpfile.js", "package.json", "assets/css", "assets/js", "assets/img"] # Config for Jekyll
+
+# Google Analytics
+google_analytics: G-VTHM3QWEDH

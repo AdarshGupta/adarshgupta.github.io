@@ -43,6 +43,16 @@ function jekyllBuild(done) {
 }
 
 /**
+ * Build the Jekyll Site
+ */
+function jekyllProdBuild(done) {
+    var productionEnv = process.env;
+    productionEnv.JEKYLL_ENV = 'production';
+    return cp.spawn('jekyll.bat', ['build'], { stdio: 'inherit', env: productionEnv })
+        .on('close', done);
+}
+
+/**
  * Rebuild Jekyll & do page reload
  */
 function jekyllRebuild(done){
@@ -137,4 +147,4 @@ exports.watch = watch;
 exports.jadeToHTML = jadeToHTML;
 exports.jekyllRebuild = gulp.series(jekyllBuild, jekyllRebuild);
 exports.default = gulp.series(jadeToHTML, styles, mergeJS, copyImages, jekyllBuild, gulp.parallel(serve, watch));
-exports.deploy = gulp.series(jadeToHTML, styles, mergeJS, copyImages, jekyllBuild, deploy);
+exports.deploy = gulp.series(jadeToHTML, styles, mergeJS, copyImages, jekyllProdBuild, deploy);
