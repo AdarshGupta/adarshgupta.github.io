@@ -107,10 +107,18 @@ function designBGStuff(){
 
     $('.design-img-link').on("touchstart", function() {
         $(this).parent().parent().parent().css('background-color', $(this).data('color'));
+        $(this).css({
+            'transform': 'scale(1.1)',
+            'background-color': 'rgba(255, 255, 255, 0.3)'
+        });
     });
 
     $('.design-img-link').on("touchend", function() {
         $(this).parent().parent().parent().css('background-color', $(this).parent().parent().parent().data('orig-color'));
+        $(this).css({
+            'transform': 'scale(1)',
+            'background-color': 'transparent'
+        });
     });
 }
 
