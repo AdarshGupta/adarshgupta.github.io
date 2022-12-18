@@ -36,7 +36,7 @@ function smoothScroll (duration) {
 	    if( target.length ) {
 	        event.preventDefault();
 	        $('html, body').animate({
-	            scrollTop: target.offset().top - 90
+	            scrollTop: target.offset().top - (window.matchMedia('(max-width: 768px)').matches ? 90 : 0)
 	        }, duration);
 	    }
 	});
