@@ -146,16 +146,20 @@ function imageRotate(){
         randomPic = Math.floor(Math.random() * thumbnailData.length);
     }
     
-
-    $('.hobby-thumb').eq(randThumbElement).attr('href', largeThumbnailPath + thumbnailData[randomPic]["fileName"]);
-    $('.hobby-thumb img').eq(randThumbElement).attr('src', smallThumbnailPath + thumbnailData[randomPic]["fileName"])
-                                        .attr('alt', thumbnailData[randomPic]["title"]);
-    
-    // Changes the meta (name and description) for the thumbnail
-    var thumbnailCover = $('.hobby-thumb').eq(randThumbElement).children('.hobby-meta').eq(0);
-    thumbnailCover.children('.name').text(thumbnailData[randomPic]["title"]);
-    thumbnailCover.children('.thumb-desc').text(thumbnailData[randomPic]["desc"]);
-
+    // Display/Switch to a new image only after it's loaded
+    var img = new Image();
+    img.onload = function(){
+        // Runs when the image is loaded
+        $('.hobby-thumb').eq(randThumbElement).attr('href', largeThumbnailPath + thumbnailData[randomPic]["fileName"]);
+        $('.hobby-thumb img').eq(randThumbElement).attr('src', smallThumbnailPath + thumbnailData[randomPic]["fileName"])
+                                            .attr('alt', thumbnailData[randomPic]["title"]);
+        
+        // Changes the meta (name and description) for the thumbnail
+        var thumbnailCover = $('.hobby-thumb').eq(randThumbElement).children('.hobby-meta').eq(0);
+        thumbnailCover.children('.name').text(thumbnailData[randomPic]["title"]);
+        thumbnailCover.children('.thumb-desc').text(thumbnailData[randomPic]["desc"]);
+    };
+    img.src = smallThumbnailPath + thumbnailData[randomPic]["fileName"]; //Starts loading the image once the src is set (not displayed yet)
 }
 
 // Functions to be called when scrolled
