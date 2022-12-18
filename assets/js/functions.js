@@ -129,11 +129,23 @@ function hobbyTada(){
 }
 
 function imageRotate(){
-
-    var randomPic = Math.floor(Math.random() * thumbnailData.length);
-    var randThumbElement = Math.floor(Math.random() * $('.hobby-thumb').length);
+    
     var largeThumbnailPath = 'assets/img/thumbnails/';
     var smallThumbnailPath = 'assets/img/thumbnails-small/';
+    var randThumbElement = Math.floor(Math.random() * $('.hobby-thumb').length);
+
+    // To make sure unique vacation pics are shown in the hobbies grid
+    // Step 1: Get all the file names for pics currently being shown (filenames are unique)
+    var displayThumbPics = $('.hobby-thumb img').map(function(){
+        return $(this).attr('src').split("/").at(-1);
+    }).get();
+
+    // Step 2: Keep generating random no. to pick a pic which isn't on display currently
+    var randomPic = Math.floor(Math.random() * thumbnailData.length);
+    while(displayThumbPics.includes(thumbnailData[randomPic]["fileName"])){
+        randomPic = Math.floor(Math.random() * thumbnailData.length);
+    }
+    
 
     $('.hobby-thumb').eq(randThumbElement).attr('href', largeThumbnailPath + thumbnailData[randomPic]["fileName"]);
     $('.hobby-thumb img').eq(randThumbElement).attr('src', smallThumbnailPath + thumbnailData[randomPic]["fileName"])
