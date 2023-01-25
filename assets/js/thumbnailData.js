@@ -263,5 +263,35 @@ let thumbnailData = [
         "title": "Chehli, Himachal Pradesh, India",
         "desc": "Nov 2021",
         "fileName": "Chehli-HP.webp"
+    },
+    {
+        "title": "Adalaj Stepwell, Gujarat, India",
+        "desc": "Dec 2022",
+        "fileName": "Adalaj_StepWell.webp"
+    },
+    {
+        "title": "Adalaj Stepwell, Gujarat, India",
+        "desc": "Dec 2022",
+        "fileName": "Adalaj_StepWell2.webp"
+    },
+    {
+        "title": "Sardar Sarovar Dam, Gujarat, India",
+        "desc": "Dec 2022",
+        "fileName": "Statue_of_Unity1.webp"
+    },
+    {
+        "title": "Statue of Unity, Gujarat, India",
+        "desc": "Dec 2022",
+        "fileName": "Statue_of_Unity2.webp"
+    },
+    {
+        "title": "Statue of Unity, Gujarat, India",
+        "desc": "Dec 2022",
+        "fileName": "Statue_of_Unity3.webp"
+    },
+    {
+        "title": "Atal Bridge, Gujarat, India",
+        "desc": "Dec 2022",
+        "fileName": "Atal_Pedestrian_Bridge_Ahm.webp"
     }
 ];
